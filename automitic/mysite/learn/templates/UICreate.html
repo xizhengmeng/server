@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UI自动创建</title>
+</head>
+<body>
+
+<div id="header">UI Code Create</div>
+
+<div id="content">
+    <textarea id="textarea1" placeholder="请填入属性列表"></textarea>
+    <textarea id="textarea2" placeholder="我是占位文字"></textarea>
+</div>
+
+<div>
+    <button id="btn">创建</button>
+</div>
+
+</body>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script>
+    function setText()
+    {
+        {#alert("haha")#}
+        var input1 = document.getElementById("textarea1")
+        {#alert(input1)#}
+        var text = input1.value
+        {#alert(text)#}
+        var input2 = document.getElementById("textarea2")
+        input2.innerText = text
+        alert(window.callback("callPython"))
+    }
+
+    $(document).ready(function(){
+      $("#btn").click(function(){
+        string = $("#textarea1").val()
+        $.get("/ajaxcreateui/", {'text': string},function(ret){
+            $('#textarea2').html(ret)
+        })
+      });
+    });
+
+</script>
+
+<style>
+#header {
+    background-color: black;
+    color: white;
+    height: 30px;
+    text-align:center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+#content {
+    margin-top: 20px;
+}
+
+#textarea1{
+    width:600px;//初始宽度
+    max-width:300px;//最大宽度
+    min-width: 300 px;
+    height:500px;//初始高度
+    max-height:500px;//最大高度
+    min-height:500px;
+    overflow-y:auto;//让滚动条自适应，保证兼容性
+    vertical-align: middle;
+{#    text-align: center;#}
+}
+
+#textarea2{
+    margin-left: 30px;
+    width:600px;//初始宽度
+    max-width:300px;//最大宽度
+    min-width: 300 px;
+    height:500px;//初始高度
+    max-height:500px;//最大高度
+    min-height:500px;
+    overflow-y:auto;//让滚动条自适应，保证兼容性
+    vertical-align: middle;
+{#    text-align: center;#}
+}
+
+#btn{
+    background-color: lightgray;
+    width: 50px;
+    height: 30px;
+    padding: 5px;
+}
+
+</style>
+
+</html>

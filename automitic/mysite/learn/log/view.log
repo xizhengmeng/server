@@ -1,0 +1,201 @@
+2016-12-23 02:09:56,975 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:09:56,989 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.011) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:11:01,238 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:11:01,240 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:12:11,379 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:12:11,381 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:12:40,420 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 1656
+2016-12-23 02:12:43,161 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:12:48,051 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesA/ HTTP/1.1" 200 2704
+2016-12-23 02:12:52,451 [Thread-5:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 3780
+2016-12-23 02:13:29,879 [Thread-6:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxpack/?branch=++%1Borigin%2FJDMobile_1108_3.9.3_IousSocial_ForMerger%1B&platName=iOS&folderName=asdf&textOnline=advance HTTP/1.1" 200 9234
+2016-12-23 02:14:40,445 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:14:40,447 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:20:17,669 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:20:17,670 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:21:09,603 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:21:09,605 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:21:11,365 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:21:18,343 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 3780
+2016-12-23 02:21:32,541 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxpack/?branch=++%1Borigin%2FJDMobile_1108_3.9.3_IousSocial%1B&platName=iOS&folderName=sdfa&textOnline=advance HTTP/1.1" 200 9266
+2016-12-23 02:24:06,956 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:24:06,958 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:24:12,895 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:24:15,688 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 3780
+2016-12-23 02:24:39,681 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:24:39,683 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:24:40,636 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:24:42,992 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 3780
+2016-12-23 02:24:47,597 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxpack/?branch=++%1Borigin%2FJDMobile_1108_3.9.3_Ceshi%1B&platName=iOS&folderName=&textOnline=advance HTTP/1.1" 200 4
+2016-12-23 02:32:00,467 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:32:00,469 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:32:52,411 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:32:52,413 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:33:06,926 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:33:06,928 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:33:11,960 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:33:19,356 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 3780
+2016-12-23 02:33:23,962 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxpack/?branch=++%1Borigin%2FJDMobile_1108_3.9.3_WangGuan%1B&platName=iOS&folderName=&textOnline=advance HTTP/1.1" 200 4
+2016-12-23 02:33:43,673 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:33:43,675 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:33:46,419 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:33:49,417 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 3780
+2016-12-23 02:33:54,859 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxpack/?branch=++%1Borigin%2FJDMobile_1108_3.9.3_IousSocial_ForMerger%1B&platName=iOS&folderName=asdf&textOnline=advance HTTP/1.1" 200 4
+2016-12-23 02:34:37,740 [Thread-5:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:34:52,061 [Thread-6:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:34:55,341 [Thread-7:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 3780
+2016-12-23 02:35:01,658 [Thread-8:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxpack/?branch=++%1Borigin%2FJDMobile_1108_3.9.3_faceLogin%1B&platName=iOS&folderName=fas&textOnline=advance HTTP/1.1" 200 4
+2016-12-23 02:35:28,254 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:35:28,255 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:35:39,674 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:35:42,367 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 3780
+2016-12-23 02:35:47,448 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxpack/?branch=++%1Borigin%2FJDMobile_1108_3.9.3_Coin%1B&platName=iOS&folderName=ask&textOnline=advance HTTP/1.1" 200 4
+2016-12-23 02:36:08,071 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:36:08,073 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:36:15,490 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:36:15,492 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:36:15,923 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:36:18,570 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 3780
+2016-12-23 02:36:24,690 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [ERROR]- "GET /ajaxpack/?branch=++%1Borigin%2FJDMobile_1108_3.9.3_faceLogin%1B&platName=iOS&folderName=fas&textOnline=advance HTTP/1.1" 500 16682
+2016-12-23 02:37:21,626 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:37:21,628 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:37:28,900 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:37:32,134 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 3780
+2016-12-23 02:37:39,288 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [ERROR]- "GET /ajaxpack/?branch=++%1Borigin%2FJDMobile_1108_3.9.3_IousSocial_ForMerger%1B&platName=iOS&folderName=aaaa&textOnline=advance HTTP/1.1" 500 16718
+2016-12-23 02:38:12,604 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:38:12,606 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:38:14,948 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:38:17,584 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 3780
+2016-12-23 02:38:23,553 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [ERROR]- "GET /ajaxpack/?branch=++%1Borigin%2FJDMobile_1108_3.9.3_FB_Net%1B&platName=iOS&folderName=asd&textOnline=advance HTTP/1.1" 500 16673
+2016-12-23 02:38:54,416 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:38:54,418 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:39:00,723 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:39:03,449 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 3780
+2016-12-23 02:39:09,940 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [ERROR]- "GET /ajaxpack/?branch=++%1Borigin%2FJDMobile_1108_3.9.3_crowd%1B&platName=iOS&folderName=asd&textOnline=advance HTTP/1.1" 500 16679
+2016-12-23 02:39:32,188 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:39:32,189 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:39:49,749 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:39:49,751 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:39:50,595 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:39:53,715 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 3780
+2016-12-23 02:40:00,282 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxpack/?branch=++%1Borigin%2FJDMobile_1108_3.9.3_crowd%1B&platName=iOS&folderName=asd&textOnline=advance HTTP/1.1" 200 433
+2016-12-23 02:40:19,472 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:40:19,474 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:40:19,731 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:40:24,429 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 3780
+2016-12-23 02:40:29,592 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxpack/?branch=++%1Borigin%2FJDMobile_1108_3.9.3_FB_Net%1B&platName=iOS&folderName=&textOnline=advance HTTP/1.1" 200 33
+2016-12-23 02:43:03,383 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 02:43:03,385 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 02:43:04,364 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 02:43:07,271 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 3780
+2016-12-23 02:43:13,734 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxpack/?branch=++%1Borigin%2FJDMobile_1108_3.9.3_FB_Net%1B&platName=iOS&folderName=fasd&textOnline=advance HTTP/1.1" 200 12
+2016-12-23 06:55:37,093 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 06:55:37,143 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 06:55:40,196 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 06:55:40,198 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 06:55:50,508 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 1656
+2016-12-23 06:55:54,339 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 06:55:58,843 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesA/ HTTP/1.1" 200 2704
+2016-12-23 06:56:13,840 [Thread-5:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxpack/?branch=++%1Borigin%2Fdev-3.8.3-anyurl%1B&platName=Andorid&folderName=123456&textOnline=advance HTTP/1.1" 200 4
+2016-12-23 06:57:28,489 [Thread-6:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxpack/?branch=++%1Borigin%2Fdev-3.8.3-anyurl%1B&platName=Andorid&folderName=123456&textOnline=advance HTTP/1.1" 200 4
+2016-12-23 06:59:44,155 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 06:59:44,157 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 07:02:05,410 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 07:02:05,439 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 14:39:36,274 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 14:39:36,464 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.029) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 14:44:34,143 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+2016-12-23 14:44:34,200 [Dummy-1:123145306509312] [django.db.backends:90] [utils:execute] [DEBUG]- (0.016) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+2016-12-23 14:44:41,170 [Thread-2:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET / HTTP/1.1" 200 1656
+2016-12-23 14:44:41,368 [Thread-3:123145310715904] [django.template:929] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/Library/Python/2.7/site-packages/django/template/base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+VariableDoesNotExist: Failed lookup for key [name] in u'<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2016-12-23 14:44:41,445 [Thread-3:123145310715904] [django.server:131] [basehttp:log_message] [WARNING]- "GET /favicon.ico HTTP/1.1" 404 4572
+2016-12-23 14:44:42,585 [Thread-4:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /package.html HTTP/1.1" 200 7508
+2016-12-23 14:44:46,437 [Thread-5:123145310715904] [django.server:131] [basehttp:log_message] [INFO]- "GET /ajaxgetbranchesI/ HTTP/1.1" 200 1535
