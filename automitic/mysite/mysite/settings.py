@@ -121,11 +121,22 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
-STATIC_URL = '/static/'
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+
 STATIC_ROOT = '/Users/wxg/Documents/django/'
+STATIC_URL = '/static/'
+
 STATICFILES_DIRS = (
-          os.path.join(os.path.dirname(__file__), '../static/').replace('\\','/'),
-    )
+
+os.path.join(BASE_DIR, 'static'),
+
+)
+
+# STATIC_URL = '/static/'
+#
+# STATICFILES_DIRS = (
+#           os.path.join(os.path.dirname(__file__), '../static/').replace('\\','/'),os.path.join(BASE_DIR, 'static'),
+#     )
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
