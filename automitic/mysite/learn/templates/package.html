@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Build Server</title>
+</head>
+<body>
+<div id="title">Build Server</div>
+<div id="content">
+    <select id="selPlatform" onchange="platFormChange(this)">
+        <option value="none">none</option>
+        <option value="iOS">iOS</option>
+        <option value="Andorid">Andorid</option>
+    </select>
+    <select onchange="gradeChange(this.value)" id="selSmall">
+        <option value="">select branch</option>
+    </select>
+    <select id="selOnline">
+        <option value="advance">advance</option>
+        <option value="online">online</option>
+    </select>
+    <input id="inputtext" type="text" name="secondName" placeholder="please input english ipa name">
+    <button id="button0">archieve</button>
+    <a href="buildlist" id="package">check result</a>
+
+    <input id="showAndHidden" type="button" onclick="showAndHidden(this);" value="显示打包说明">
+    <input id="showAndHiddenupload" type="button" onclick="showAndHiddenupload(this);" value="使用上传功能">
+     <!--<button id="button1">sendMail</button>-->
+</div>
+<div id="timeLabel">select branch to build</div>
+
+<div id="upload">
+    <form enctype="multipart/form-data" action="/uploadFile/" method="post">
+        {% csrf_token %}
+        <input type="file" name="myfile1" />
+        <br>
+        <input type="file" name="myfile2" />
+        <br/>
+        <input type="submit" value="upload"/>
+
+    </form>
+</div>
+
+<div id="description" >打包工具使用说明:<br><br>
+1.选择打包平台iOS/Andorid<br>2.等待对应分支拉取完毕<br>3.选择对应分支<br>4.选择环境线上/预发<br>5.填写自己的包标识,为了对同一分支做区分<br>6.点击archieve按钮,等待打包完成<br><span style="color:#ff0000;">7.若显示有打包任务正在执行,请等待该任务执行请等待,稍后再试</span><br>8.打包完成后点击check result在对应的平台下寻找自己所编译的安装包,点击下载<br>9.暂时iOS编译时间在4-6分钟,安卓在2-3分钟,请耐心等待<br><br>如遇到问题或者有其他建议请联系hanshenghui
+</div>
+
+</body>
+
+<script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+    needDownCount = true;
+    goon = true;
+    
+    // self.location='jsonFormatClick1'
+
+    $(document).ready(function(){
+//         $.ajax({
+//                 url: "/ajaxgetbranches/",    //后台webservice里的方法名称
+//                 type: "get",
+// {#                dataType: "string",#}
+// {#                contentType: "application/json",#}
+//                 traditional: true,
+//                 success: function (data) {
+//                     alert('chenggong' + data)
+//                     data = data.split("\n")
+//                     var optionstring = "";
+//                     for (var i in data) {
+//                        var jsonObj = data[i]
+//                        jsonObj = jsonObj.replace("[31m","")
+//                        jsonObj = jsonObj.replace("[m","")
+//                        optionstring += "<option value=\"" + jsonObj + "\" >" + jsonObj + "</option>";
+//                     }
+//                     $("#selSmall").html("<option>select branch</option> "+optionstring);
+//                 },
+//                 error: function (msg) {
+//                     alert('shibai' + msg)
+//                 }
+//         });
+
+        second = Math.random() * 50 + 150;
+        second = Math.round(second*100)/100
+
+        $("#button0").click(function(){
+
+          var sel = $("#selSmall")
+          var text = sel.val(); // 分支选择
+          if (text == "select branch") {
+              alert("please select branch");
+              return;
+          }
+
+          var selPlat = $("#selPlatform")
+          var textPlat = selPlat.val(); // 平台选择
+
+          var inputText = $("#inputtext")
+          var textInput = inputText.val(); // 文件夹名称选择
+
+          var onlineText = $("#selOnline")
+          var textOnline = onlineText.val(); // 线上或者预发选择
+
+          alert("start to build" + textOnline)
+          needDownCount = true;
+          second = Math.random() * 50 + 150;
+          second = Math.round(second*100)/100
+          $.get("/ajaxpack/", {'branch': text,'platName':textPlat, 'folderName':textInput,'textOnline':textOnline},function(ret){
+              if (ret == 'wait') {
+                  alert('当前有任务正在执行,请稍后执行新的任务')
+                  needDownCount = false;
+                  goon = false;
+               }else if(ret.indexOf("done") >= 0 ){
+                  str=ret.replace("done","");                  
+                  if (str.indexOf('Android') >= 0 ) {
+                     str = 'http://10.13.87.32:8000/Documents/Build/' + str + '/JDJR-debug.apk'
+                  }else {
+                     str = 'http://10.13.87.32:8000/Documents/Build/' + str + '/Payload.ipa'
+                  }
+
+                  if (confirm("打包成功，获取安装包")) {  
+                     self.location=('downloadipa?url='+str) 
+                  }  
+                  else {  
+                      alert("请稍后点击checkresult");  
+                  } 
+                  needDownCount = false;
+                  goon = true;
+
+               }else if(ret == 'fail'){
+                   alert('打包失败,联系开发人员')
+                   needDownCount = false;
+                   goon = false;
+               }else {
+                   alert('未知,联系开发人员')
+                   needDownCount = false;
+                   goon = false;
+               }
+
+          })
+          change()
+        });
+
+         $("#button1").click(function(){
+            $.get("/ajaxsendMail/", {'text': 'text'},function(ret){
+                 
+            })
+         });
+    });
+
+    function gradeChange(value) {
+        // var sel = document.getElementById("selSmall")
+        // var index = sel.selectedIndex; // 选中索引
+        // var text = sel.options[index].text; // 选中文本
+    }
+    
+    function change() {
+         second--;
+         if(second>1) {
+          second = second.toFixed(0);//rs的值为56.45
+          document.getElementById("timeLabel").innerHTML = "剩余时间:" + second +"秒"
+          if (needDownCount) {
+             timer = setTimeout('change()',1000);//调用自身实现
+          }else {
+             if (goon == true) {
+                document.getElementById("timeLabel").innerHTML = "编译成功，请点击check result查看所需结果"
+             }else {
+                document.getElementById("timeLabel").innerHTML = "选择分支开始编译"
+             }
+             
+          }
+         }else{
+//           alert("这是个大活,我还需要一点时间");
+           second = 120;
+           timer = setTimeout('change()',1000);//调用自身实现
+           // clearTimeout(timer);
+         }
+    }
+
+    function changeStatus() {
+    	document.getElementById("timeLabel").innerHTML = "build success，please click check result to get ipa list"
+    }
+
+    function platFormChange(objct) {
+       var value = objct.value
+       if (value == "iOS") {
+          alert("iOS分支拉取中")
+          $.ajax({
+                url: "/ajaxgetbranchesI/",    //后台webservice里的方法名称
+                type: "get",
+{#                dataType: "string",#}
+{#                contentType: "application/json",#}
+                traditional: true,
+                success: function (data) {
+                    alert('chenggong' + data)
+                    data = data.split("\n")
+                    var optionstring = "";
+                    for (var i in data) {
+                       var jsonObj = data[i]
+                       jsonObj = jsonObj.replace("[31m","")
+                       jsonObj = jsonObj.replace("[m","")
+                       optionstring += "<option value=\"" + jsonObj + "\" >" + jsonObj + "</option>";
+                    }
+                    $("#selSmall").html("<option>select branch</option> "+optionstring);
+                },
+                error: function (msg) {
+                    alert('shibai' + msg)
+                }
+          });
+       }else if(value == "Andorid") {
+          alert("Andorid分支拉取中")
+          $.ajax({
+                url: "/ajaxgetbranchesA/",    //后台webservice里的方法名称
+                type: "get",
+{#                dataType: "string",#}
+{#                contentType: "application/json",#}
+                traditional: true,
+                success: function (data) {
+                    alert('chenggong' + data)
+                    data = data.split("\n")
+                    var optionstring = "";
+                    for (var i in data) {
+                       var jsonObj = data[i]
+                       jsonObj = jsonObj.replace("[31m","")
+                       jsonObj = jsonObj.replace("[m","")
+                       optionstring += "<option value=\"" + jsonObj + "\" >" + jsonObj + "</option>";
+                    }
+                    $("#selSmall").html("<option>select branch</option> "+optionstring);
+                },
+                error: function (msg) {
+                    alert('shibai' + msg)
+                }
+           });     
+       }
+    }
+
+    function showAndHidden (object) {
+        var text = object.value
+        var div = document.getElementById("description")
+        if (text == "显示打包说明") {
+           div.style.display = 'block'
+           object.value = "隐藏打包说明"
+        }else {
+           div.style.display = 'none'
+           object.value = "显示打包说明"
+        }
+    }
+
+    function showAndHiddenupload (object) {
+        var text = object.value
+        var div = document.getElementById("upload")
+        if (text == "使用上传功能") {
+            div.style.display = 'block'
+            object.value = "不用上传功能"
+        }else {
+            div.style.display = 'none'
+            object.value = "使用上传功能"
+        }
+    }
+
+</script>
+
+<style>
+#title {
+    background-color: black;
+    color: white;
+    height: 30px;
+    text-align:center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+#content {
+    background-color: ghostwhite;
+    height: 50px;
+    text-align:center;
+    padding-top: 25px;
+}
+
+#button0 {
+    width: 100px;
+    text-align:center;
+}
+
+#button1 {
+    width: 150px;
+    text-align:center;
+}
+
+#selSmall {
+    width: 300px;
+    text-align:center;
+}
+
+#showAndHidden   {
+    margin-left: 50px;
+}
+
+#showAndHiddenupload   {
+    /*margin-left: 10px;*/
+}
+
+#upload {
+    margin-top: 20px;
+    /*width: 600px;*/
+    /*height: 200px;*/
+    text-align:left;
+    background-color: whitesmoke;
+    display: none;
+}
+
+#description {
+    margin-top: 50px;
+    /*width: 600px;*/
+    /*height: 200px;*/
+    text-align:left;
+    background-color: ghostwhite;
+    display: none;
+}
+
+</style>
+
+</html>

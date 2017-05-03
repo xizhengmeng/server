@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>API Server</title>
+</head>
+<body>
+
+<div id="title">API Server</div>
+
+<div id="upload">
+    <form enctype="multipart/form-data" action="/uploadUrlFiles/" method="post">
+        {% csrf_token %}
+        <input id="inputtext" type="text" placeholder="请输入接口标识" name="inputId"></input>
+        <br/>
+        <input type="file" name="myfile1" value="选择接口1"/>
+        <br>
+        <input type="file" name="myfile2" />
+        <br/>
+        <input type="file" name="myfile3" />
+        <br>
+        <input type="file" name="myfile4" />
+        <br/>
+        <input type="file" name="myfile5" />
+        <br>
+        <input type="file" name="myfile6" />
+        <br/>
+        <input type="file" name="myfile7" />
+        <br/>
+        <input id="uploadButton" type="submit" value="upload"/>
+
+    </form>
+</div>
+
+</body>
+
+<style>
+#title {
+    background-color: black;
+    color: white;
+    height: 30px;
+    text-align:center;
+    padding: 20px;
+    font-size: 30px;
+}
+
+#upload {
+    height: 185px;
+    filter:alpha(opacity=50);
+    margin-top: 10px;
+}
+
+#inputtext {
+  margin-top: 10px;
+}
+
+#createAPI {
+    margin-top: 10px;
+}
+
+</style>
+
+</html>

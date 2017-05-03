@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>  
+        <!-- ['上证50','上证指数','上证180','沪深300','恒生指数','恒生指数H','上证380','红利指数','中证红利','中证500','深证100R'] -->
+        <script src="static/wtinychartunmin.js"></script>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <canvas id="line" width="1300" height="300"></canvas>
+        <input type="button" name="myfile1" value="红利指数" id="8"/>
+        <input type="button" name="myfile1" value="恒生指数H" id="2"/>
+        <input type="button" name="myfile1" value="上证50" id="3"/>
+        <input type="button" name="myfile1" value="中证红利" id="9"/>
+        <input type="button" name="myfile1" value="上证180" id="5"/>
+        <input type="button" name="myfile1" value="上证指数" id="4"/>
+        <input type="button" name="myfile1" value="沪深300" id="6"/>
+        <input type="button" name="myfile1" value="上证380" id="7"/>
+        <input type="button" name="myfile1" value="中证500" id="10"/>
+        <input type="button" name="myfile1" value="恒生指数" id="1"/>
+
+        <canvas id="linedetail" width="1800" height="500"></canvas>
+    </body>
+    <script src="http://apps.bdimg.com/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $.post("/getindexallurl/",function(ret){
+             showchart(ret)          
+        })
+
+        // $.post("/getindexrank/",function(ret){
+        
+        // })        
+
+        $("#1").click(function(){
+            string = $("#1").val()
+            $.post("/getindexallurl/", {'name': string},function(ret){
+                 showchartsingle(ret)
+             })
+        })
+
+        $("#2").click(function(){
+            string = $("#2").val()
+            $.post("/getindexallurl/", {'name': string},function(ret){
+                 showchartsingle(ret)
+             })
+        })
+
+        $("#3").click(function(){
+            string = $("#3").val()
+            $.post("/getindexallurl/", {'name': string},function(ret){
+                 showchartsingle(ret)
+             })
+        })
+
+        $("#4").click(function(){
+            string = $("#4").val()
+            $.post("/getindexallurl/", {'name': string},function(ret){
+                 showchartsingle(ret)
+             })
+        })
+
+        $("#6").click(function(){
+            string = $("#5").val()
+            $.post("/getindexallurl/", {'name': string},function(ret){
+                 showchartsingle(ret)
+             })
+        })
+
+        $("#7").click(function(){
+            string = $("#7").val()
+            $.post("/getindexallurl/", {'name': string},function(ret){
+                 showchartsingle(ret)
+             })
+        })
+
+        $("#8").click(function(){
+            string = $("#8").val()
+            $.post("/getindexallurl/", {'name': string},function(ret){
+                 showchartsingle(ret)
+             })
+        })
+
+        $("#9").click(function(){
+            string = $("#9").val()
+            $.post("/getindexallurl/", {'name': string},function(ret){
+                 showchartsingle(ret)
+             })
+        })
+
+        $("#10").click(function(){
+            string = $("#10").val()
+            $.post("/getindexallurl/", {'name': string},function(ret){
+                 showchartsingle(ret)
+             })
+        })
+    
+      function showchart(string) {
+            list = JSON.parse(string)
+
+            diclist = []
+            datelistout = []
+            for (var i = 0; i < list.length; i++) {
+                var newlist = list[i]
+                newlist = JSON.parse(newlist)
+                valuelist = []
+                datelist = []
+                for (var j = 0; j < newlist.length; j++) {
+                    var item = newlist[j]
+                    var value = item.earyeild
+                    var date = item.date
+                    date=date.substring(4,date.length)
+                    valuelist.push(value)
+                    datelist.push(date)
+                }
+                dic1 = {name:'Jack',curve:false}
+                dic1['value'] = valuelist
+                diclist.push(dic1)  
+                datelistout = datelist             
+            }
+
+            var options={
+            data:[
+                {value:[243,13,564,134,97,139,233,47,88,43,197,245,841,32,775,123,666,235,0],name:'Jack',curve:false},
+                {value:[80,1,56,14,917,19,23,474,418,430,97,245,84,302,75,12,61,500],name:'Nick',curve:true},
+                {value:[243,1,54,134,97,139,233,47,88,43,197,245,841,32,775,123,666,235,0],name:'Jack',curve:false},
+                {value:[23,143,56,14,917,19,23,474,418,430,97,245,84,302,75,12,61,500],name:'Nick',curve:true},
+            ],
+            name:'wzz',
+            xAxis:["13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00","0:00","1:00","2:00","3:00","4:00","5:00","6:00","8:00"],
+            yAxis:"%",
+            message:"name:{{name}} value:{{value}}",
+            title:"盈利收益率表"
+            }
+
+            options['data'] = diclist
+            options['xAxis'] = datelistout
+
+            var canvas=document.getElementById('line');
+            var ctx=canvas.getContext('2d');
+            var wtc=wtChart.init(ctx,'line').config(options).draw();
+      }
+
+
+      function showchartsingle(string) {
+            list = JSON.parse(string)
+
+            diclist = []
+            datelistout = []
+            for (var i = 0; i < list.length; i++) {
+                var newlist = list[i]
+                newlist = JSON.parse(newlist)
+                valuelist = []
+                datelist = []
+                for (var j = 0; j < newlist.length; j++) {
+                    var item = newlist[j]
+                    var value = item.earyeild
+                    var date = item.date
+                    date=date.substring(4,date.length)
+                    valuelist.push(value)
+                    datelist.push(date)
+                }
+                dic1 = {name:'Jack',curve:false}
+                dic1['value'] = valuelist
+                diclist.push(dic1)  
+                datelistout = datelist             
+            }
+
+            var options={
+            data:[
+                {value:[243,13,564,134,97,139,233,47,88,43,197,245,841,32,775,123,666,235,0],name:'Jack',curve:false},
+                {value:[80,1,56,14,917,19,23,474,418,430,97,245,84,302,75,12,61,500],name:'Nick',curve:true},
+                {value:[243,1,54,134,97,139,233,47,88,43,197,245,841,32,775,123,666,235,0],name:'Jack',curve:false},
+                {value:[23,143,56,14,917,19,23,474,418,430,97,245,84,302,75,12,61,500],name:'Nick',curve:true},
+            ],
+            name:'wzz',
+            xAxis:["13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00","0:00","1:00","2:00","3:00","4:00","5:00","6:00","8:00"],
+            yAxis:"%",
+            message:"name:{{name}} value:{{value}}",
+            title:"盈利收益率表"
+            }
+
+            options['data'] = diclist
+            options['xAxis'] = datelistout
+
+            var canvas=document.getElementById('linedetail');
+            var ctx=canvas.getContext('2d');
+            var wtc=wtChart.init(ctx,'line').config(options).draw();
+      }      
+
+    </script>
+</html> 
