@@ -410,3 +410,6 @@ def getindexrank(request):
 
 def gotojinkens(request):
     return HttpResponseRedirect('http://bds.cbpmgt.com/jenkins/job/ios_jdjr/')
+
+def gotogitjdjr(request):
+    return HttpResponseRedirect('http://jcode.cbpmgt.com')

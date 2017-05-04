@@ -46,6 +46,8 @@ urlpatterns = [
                url(r'getforderlist', learn_views.checkfilelist),
                url(r'createforder', learn_views.createforder),
                url(r'jinkens', learn_views.gotojinkens),
+               url(r'gotogit', learn_views.gotogitjdjr),
+
                ]
 
 # ... the rest of your URLconf goes here ...
