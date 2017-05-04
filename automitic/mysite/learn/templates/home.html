@@ -13,7 +13,15 @@
 <body>
 
 <div id="header">
-    <h1>JDJR</h1>
+    <!--<img id="titleimage" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1493891587311&di=e37d5371238f4150fc37fc41cdc84e19&imgtype=0&src=http%3A%2F%2Fpic.35pic.com%2Fnormal%2F08%2F52%2F52%2F3347542_142639031341_2.jpg"/>-->
+    <img id="titleimage" src="{% static 'image/JRFast.png'%}">
+    <a id="first" style= "position:absolute;z-index:1;left:10px;top:100px; "  href="jsonFormatClick1">JSONFromat</a>
+    <a id="first" style= "position:absolute;z-index:1;left:10px;top:150px; " href="interfaceTestClick">APITest</a>
+    <a id="first" style= "position:absolute;z-index:1;left:10px;top:200px; " href="uicreate.html">UI代码生成</a>
+    <a id="first" style= "position:absolute;z-index:1;left:10px;top:250px; " href="next.htm">JSON转Model</a>
+    <a id="first" style= "position:absolute;z-index:1;left:10px;top:300px; " href="fullnewweb">假数据服务</a>
+    <a id="first" style= "position:absolute;z-index:1;left:10px;top:350px; " href="jinkens">打包iOS</a>
+    <a id="first" style= "position:absolute;z-index:1;left:10px;top:400px; " href="jinkens">打包Andorid</a>
 </div>
 
 <script type="text/javascript">
@@ -24,45 +32,69 @@
         }
 </script>
 
-<div id="nav">
-<p id="jsonformat1">
-    <a class="btn btn-primary btn-lg" role="button">学习更多</a>
-    <a class="btn btn-primary btn-lg" role="button">学习更多1</a>
-</p>
 <!--<a href="jsonFormatClick1" id="jsonformat1">JSONFormat(ForCheck)</a>-->
-<a href="jsonFormatClick2" id="jsonformat2">JSONFormat(ForUse)</a>
-<a href="interfaceTestClick" id="interface">APITest</a>
-<a href="uicreate.html" id="UI">UI Code Create</a>
-<a href="next.html" id="json">JSON To Model</a>
-<a href="package.html" id="package">Build Server</a>
-<a href="fullnewweb.html" id="webserver">API Server</a>
+<!--<a href="jsonFormatClick2" id="jsonformat2">JSONFormat(ForUse)</a>-->
+<!--<a href="interfaceTestClick" id="interface">APITest</a>-->
+<!--<a href="uicreate.html" id="UI">UI Code Create</a>-->
+<!--<a href="next.html" id="json">JSON To Model</a>-->
+<!--<a href="package.html" id="package">Build Server</a>-->
+<!--<a href="fullnewweb.html" id="webserver">API Server</a>-->
 <!-- <a href="indexPage" id="webserver">Server</a> -->
 <!--<a href="fullnewweb" id="webserverN">API ServerN</a>-->
 <!--<a href="blockClick" id="block">博客</a>-->
-</div>
 
-
-<div id="footer">
-Copyright JDJR
-</div>
 
 </body>
 
 <style>
+
+#titleimage {
+   width:auto;
+   /*max-width:100%;*/
+   height:auto;
+}
+
+
+.buttonl {
+    background-color: lightgray;
+    padding: 5px;
+    border-radius: 2px;
+    color: pink;
+    box-shadow: 2px 2px 2px #888888;
+    font-size: 15px;
+    margin-left: 10px;
+}
+
+#title {
+    height: 30px;
+    background-color: lightgray;
+
+}
+
+.title {
+    color:purple;
+    font-size: 30px;
+}    
+ 
+#first {
+   background-color:#1ABB9C;
+   padding: 5px;
+   border-radius:5px;
+   color: white;
+   /*box-shadow: 10px 10px 5px #888888;*/
+   margin-left: 20px;
+}
+
 #header {
-    background-color:black;
-    color:white;
+    background-color:white;
+    color:red;
     padding:5px;
-    height: 70px;
-    text-align:center;
 }
 #nav {
     line-height:30px;
-    background-color:#eeeeee;
+    background-color:white;
     height:100px;
-{#    width:100px;#}
-{#    float:left;#}
-{#    padding:5px;#}
+    margin-top: 10px;
 }
 #section {
     width:350px;

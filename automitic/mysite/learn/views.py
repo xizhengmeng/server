@@ -407,3 +407,6 @@ def getindexall(request):
 def getindexrank(request):
     getindexrankfun()
     return HttpResponse()
+
+def gotojinkens(request):
+    return HttpResponseRedirect('http://bds.cbpmgt.com/jenkins/job/ios_jdjr/')
