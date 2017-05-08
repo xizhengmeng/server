@@ -33,6 +33,9 @@ def compute(request):
 def uicreate(request):
     return render(request,'UICreate.html')
 
+def packAndroid(request):
+    return render(request,'package.html')
+
 def webserver(request):
     return render(request,'WebServer.html')
 

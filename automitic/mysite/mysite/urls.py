@@ -47,6 +47,7 @@ urlpatterns = [
                url(r'createforder', learn_views.createforder),
                url(r'jinkens', learn_views.gotojinkens),
                url(r'gotogit', learn_views.gotogitjdjr),
+               url(r'packageAndroid', learn_views.packAndroid),
 
                ]
 
