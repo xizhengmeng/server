@@ -27,7 +27,7 @@
     <a class="button" id="git" style="position: absolute;top: 350px;left: 800px" href="gotogit" onmouseover="showDetailText(this)" onmouseout="clearTest()">git服务</a>
         <!--<a id="first" style= "position:absolute;z-index:1;left:10px;top:400px; " href="jinkens">打包(Andorid)</a>-->
     <div style="position: absolute; left: 20px; top: 20px; color: white;;">京东金融效率工具</div>
-    <div id="detailText" style="position: absolute;top: 150px; left: 250px; width: 500px; height: 400px; background-color:rgba(220,220,220,0.5); color: black"></div>>
+    <div id="detailText" style="position: absolute;top: 150px; left: 250px; width: 500px; height: 400px; font-size: 17px;background-color:rgba(220,220,220,0.5); color: rgba(112,128,100,0.5)"></div>>
 
 </div>
 
@@ -47,21 +47,21 @@
         var idstring = th.id
         var detailDiv = document.getElementById('detailText');
         if (idstring == 'ios') {
-            detailDiv.innerHTML = "this is a div"
+            detailDiv.innerHTML = "1.用于研发或者测试人员iOS工程打包;<br/><br/>2.请先联系研发人员获取分支名称;<br/><br/>3.进入打包界面后点击 JDJR Build;<br/><br/>4.选择QA打包;<br/><br/>5.请填入分支名称tag_Name后点击-开始构建发布;<br/><br/>6.打包完成后点击左侧的历史对应的蓝色标示，进入底部扫码下载安装包"
         }else if (idstring == 'android'){
-            detailDiv.innerHTML = '娃哈哈呀娃哈哈'
+            detailDiv.innerHTML = "1.用于研发或者测试人员Android工程打包;<br/><br/>2.请先联系研发人员获取分支名称;<br/><br/>3.进入打包界面后点击 JDJR Build;<br/><br/>4.选择QA打包;<br/><br/>5.请填入分支名称tag_Name后点击-开始构建发布;<br/><br/>6.打包完成后点击左侧的历史对应的蓝色标示，进入底部扫码下载安装包"
         }else if (idstring == 'androidout'){
-            detailDiv.innerHTML = '娃哈哈呀娃哈哈123'
+            detailDiv.innerHTML = "1.用于研发人员更换特定分支文件，并且打包;<br/><br/>2.请先联系研发人员获取分支名称;<br/><br/>3.进入打包界面后选择Andriod包;<br/><br/>4.等待分支更新完毕，选择对应的分支;<br/><br/>5:点击右侧上传文件，现在支持一次上传两个文件进行替换<br/><br/>6.点击开始打包等待完成"
         }else if (idstring == 'server'){
-            detailDiv.innerHTML = '娃哈哈呀娃哈哈234'
+            detailDiv.innerHTML = "1.用于研发人员制作假数据使用;<br/><br/>2.进入界面后请输入自己的erp，点击查询，如果第一次使用会自动创建账户;<br/><br/>3.现在支持一次创建七个的url;<br/><br/>4.将标准的json填入之后点击插入即可进行访问;<br/><br/>5:安卓和iOS工程内部已有现成的封装，使用方法请联系曾宪明(Android)或者韩胜辉(iOS)<br/><br/>"
         }else if (idstring == 'jsonformat'){
-            detailDiv.innerHTML = '娃哈哈呀娃哈哈345'
+            detailDiv.innerHTML = 'json格式化功能'
         }else if (idstring == 'ui'){
-            detailDiv.innerHTML = '娃哈哈呀娃哈哈456'
+            detailDiv.innerHTML = '1.用于iOS开发人员快速根据属性创建UI代码'
         }else if (idstring == 'jsontomodel'){
-            detailDiv.innerHTML = '娃哈哈呀娃哈哈567'
+            detailDiv.innerHTML = '1.用于研发人员快速将json转换为Model，配合MJExtension使用;<br/><br/>2.将json串填入方格，然后点击转换'
         }else if (idstring == 'git'){
-            detailDiv.innerHTML = '娃哈哈呀娃哈哈678'
+            detailDiv.innerHTML = 'git服务入口'
         }
     }
 

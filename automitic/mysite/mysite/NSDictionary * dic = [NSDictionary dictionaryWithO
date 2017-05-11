@@ -1,0 +1,12 @@
+NSDictionary * dic = [NSDictionary dictionaryWithObjectsAndKeys:
+                          liveId?liveId:@"",@"pageId",
+                          busiType?busiType:@"",@"busiType",
+                          productId?productId:@"",@"productId",
+                          nil];
+    NSDictionary *jsonDict = @{@"zb" : dic};
+    
+    [self spointSetCookie:jsonDict];
+
+
+
+    WebViewCommon.h
