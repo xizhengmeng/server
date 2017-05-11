@@ -36,10 +36,10 @@
     <a class="button" id="ui" style="position: absolute;top: 360px;" href="uicreate.html" onmouseover="showDetailText(this)" onmouseout="clearTest()">● UI代码生成(iOS)</a>
     <a class="button" id="jsontomodel" style="position: absolute;top: 400px;" href="next.htm" onmouseover="showDetailText(this)" onmouseout="clearTest()">● JSON转Model(iOS)</a>
     <a class="button" id="git" style="position: absolute;top: 440px" href="gotogit" onmouseover="showDetailText(this)" onmouseout="clearTest()">● git服务</a>
-    <a class="button" id="testflight" style="position: absolute;top: 480px; color:rgba(255,0,0,0.3)" href="gotogit" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 发布testfilght</a>
-    <a class="button" id="quality" style="position: absolute;top: 520px;color:rgba(255,0,0,0.3)" href="gotogit" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 代码质量扫描</a>
-    <a class="button" id="workscan" style="position: absolute;top: 560px;color:rgba(255,0,0,0.3)" href="gotogit" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 工程扫描</a>
-    <a class="button" id="blog" style="position: absolute;top: 600px;color:rgba(255,0,0,0.3)" href="gotogit" onmouseover="showDetailText(this)" onmouseout="clearTest()">● Blog</a>
+    <a class="button" id="testflight" style="position: absolute;top: 480px; color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 发布testfilght</a>
+    <a class="button" id="quality" style="position: absolute;top: 520px;color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 代码质量扫描</a>
+    <a class="button" id="workscan" style="position: absolute;top: 560px;color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 工程扫描</a>
+    <a class="button" id="blog" style="position: absolute;top: 600px;color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● Blog</a>
         <!--&lt;!&ndash;<a id="first" style= "position:absolute;z-index:1;left:10px;top:400px; " href="jinkens">打包(Andorid)</a>&ndash;&gt;-->
 
 
@@ -82,6 +82,14 @@
             detailDiv.innerHTML = '1.用于研发人员快速将json转换为Model，配合MJExtension使用;<br/><br/>2.将json串填入方格，然后点击转换'
         }else if (idstring == 'git'){
             detailDiv.innerHTML = 'git服务入口'
+        }else if (idstring == 'testflight'){
+            detailDiv.innerHTML = '研发中'
+        }else if (idstring == 'quality'){
+            detailDiv.innerHTML = '研发中'
+        }else if (idstring == 'workscan'){
+            detailDiv.innerHTML = '研发中'
+        }else if (idstring == 'blog'){
+            detailDiv.innerHTML = '研发中'
         }
     }
 
