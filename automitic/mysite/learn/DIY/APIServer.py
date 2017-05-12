@@ -27,7 +27,7 @@ def writecontent(string,foldername,filename):
        return 'error for json'
 
 def checkfile(string):
-    filePath = '/Users/wxg/Documents/APIServer/'
+    filePath = '/Users/jdjr/Documents/APIServer/'
     finalfilePath = filePath + string
 
     if (os.path.exists(finalfilePath) == False):
@@ -42,7 +42,7 @@ def checkfile(string):
     return string
 
 def createfolder(string):
-    filePath = '/Users/wxg/Documents/APIServer/'
+    filePath = '/Users/jdjr/Documents/APIServer/'
     finalFilePath = filePath + string
 
     if os.path.exists(finalFilePath) == True:
