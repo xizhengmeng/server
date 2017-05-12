@@ -137,6 +137,7 @@
 
     function addBtnEvent(id){
         $("#"+id).bind("click",function(){
+            alert('ceshi')
             var $this = $(this);
             filename = $this.val()
             $('#textarea1').html('')
