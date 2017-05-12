@@ -6,9 +6,11 @@
 </head>
 <body>
 
-<div id="title">API Server</div>
+<div style="height: 50px;margin-top: 0px;width: 100%;float: right; background-color: rgba(250,250,250,1);border-width: 0;border-bottom-width: 1px;border-style:solid;border-color: rgba(230,230,230,1);">
+  <a style="color: black;width: 100%;float: right;text-align: center; font-size: 22px;margin-top: 10px;">假数据服务</a>
+</div>
 
-<div id="buttons">
+<div style="top: 70px">
     <input type="inputtext" id="foldername">
     <input type="button" value="查询" id="check">
     <!--<input type="button" value="创建" id="create">-->
@@ -19,8 +21,8 @@
 </div>
 
 <div id="content">
-    <textarea id="textarea1" placeholder="请输入接口内容"></textarea>
-    <input type="button" value="保存" id="insert">
+    <textarea id="textarea1" placeholder="请输入接口内容，请保证是标准JSON"></textarea>
+    <input type="button" value="保存" id="insert" style="position: absolute;margin-left: 10px;top: 475px;background-color: rgba(0,0,0,0.1);color: rgba(110,110,110,1);width: 50px;height: 30px;font-size: 15px;border-width: 0px;border-radius:5px;">
     {% csrf_token %}
 </div>
 
@@ -60,43 +62,43 @@
                     }
 
                     if (i == 0) {
-                        var btn=$("<input type='button' id='0' value=\'" + jsonObj + "\'>");
+                        var btn=$("<input type='button' id='0' value=\'" + 'ur11' + "\'><br/><br/>");
                         $("#files").append(btn);
                         addBtnEvent('0');
                     }else if(i == 1) {
-                        var btn=$("<input type='button' id='1' value=\'" + jsonObj + "\'>");
+                        var btn=$("<input type='button' id='1' value=\'" + 'ur12' + "\'><br/><br/>");
                         $("#files").append(btn);
                         addBtnEvent('1');
                     }else if(i == 2) {
-                        var btn=$("<input type='button' id='2' value=\'" + jsonObj + "\'>");
+                        var btn=$("<input type='button' id='2' value=\'" + 'ur13' + "\'><br/><br/>");
                         $("#files").append(btn);
                         addBtnEvent('2');
                     }else if(i == 3) {
-                        var btn=$("<input type='button' id='3' value=\'" + jsonObj + "\'>");
+                        var btn=$("<input type='button' id='3' value=\'" + 'ur14' + "\'><br/><br/>");
                         $("#files").append(btn);
                         addBtnEvent('3');
                     }else if(i == 4) {
-                        var btn=$("<input type='button' id='4' value=\'" + jsonObj + "\'>");
+                        var btn=$("<input type='button' id='4' value=\'" + 'ur15' + "\'><br/><br/>");
                         $("#files").append(btn);
                         addBtnEvent('4');
                     }else if(i == 5) {
-                        var btn=$("<input type='button' id='5' value=\'" + jsonObj + "\'>");
+                        var btn=$("<input type='button' id='5' value=\'" + 'ur16' + "\'><br/><br/>");
                         $("#files").append(btn);
                         addBtnEvent('5');
                     }else if(i == 6) {
-                        var btn=$("<input type='button' id='6' value=\'" + jsonObj + "\'>");
+                        var btn=$("<input type='button' id='6' value=\'" + 'ur17' + "\'><br/><br/>");
                         $("#files").append(btn);
                         addBtnEvent('6');
                     }else if(i == 7) {
-                        var btn=$("<input type='button' id='7' value=\'" + jsonObj + "\'>");
+                        var btn=$("<input type='button' id='7' value=\'" + 'ur18' + "\'><br/><br/>");
                         $("#files").append(btn);
                         addBtnEvent('7');
                     }else if(i == 8) {
-                        var btn=$("<input type='button' id='8' value=\'" + jsonObj + "\'>");
+                        var btn=$("<input type='button' id='8' value=\'" + 'ur19' + "\'><br/><br/>");
                         $("#files").append(btn);
                         addBtnEvent('8');
                     }else if(i == 9) {
-                        var btn=$("<input type='button' id='9' value=\'" + jsonObj + "\'>");
+                        var btn=$("<input type='button' id='9' value=\'" + 'ur110' + "\'><br/><br/>");
                         $("#files").append(btn);
                         addBtnEvent('9');
                     }
@@ -155,28 +157,25 @@
     font-size: 30px;
 }
 
-#buttons{
-   background-color: #eeeeee;
-   margin-top: 20px;
-}
-
 #files{
-    background-color: gray;
-    height: 30px;
+    background-color: rgba(230,230,230,0.2);
+    height: 500px;
+    width: 200px;
     margin-top: 20px;
 }
 
 #content{
-    background-color: lightgray;
+    position: absolute;
+    margin-left:230px;
+    /*background-color: lightgray;*/
     height: 500px;
     text-align:center;
-    padding: 20px;
     font-size: 30px;
-    margin-top: 30px;
+    top: 100px;
 }
 
 #textarea1{
-    width:1000px;//初始宽度
+    width:800px;//初始宽度
 max-width:1500px;//最大宽度
 min-width: 300 px;
     height:500px;//初始高度
@@ -184,6 +183,7 @@ max-height:500px;//最大高度
 min-height:500px;
     overflow-y:auto;//让滚动条自适应，保证兼容性
 vertical-align: middle;
+border-color: rgba(200,200,200,1);
 /*text-align: center;*/
 }
 
