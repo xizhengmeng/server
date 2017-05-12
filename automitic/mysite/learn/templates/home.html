@@ -32,14 +32,15 @@
     <hr style="height:1px;border:none;border-top:1px solid rgba(230,230,230,1);margin-top: 210px;width: 160px;margin-left: 35px"/>
 
     <a class="button" id="server" style="position: absolute;top: 280px;" href="fullnewweb" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 假数据服务</a>
-    <a class="button" id="jsonformat" style="position: absolute;top: 320px;" href="jsonFormatClick1" onmouseover="showDetailText(this)" onmouseout="clearTest()">● JSON格式化</a>
-    <a class="button" id="ui" style="position: absolute;top: 360px;" href="uicreate.html" onmouseover="showDetailText(this)" onmouseout="clearTest()">● UI代码生成(iOS)</a>
-    <a class="button" id="jsontomodel" style="position: absolute;top: 400px;" href="next.htm" onmouseover="showDetailText(this)" onmouseout="clearTest()">● JSON转Model(iOS)</a>
-    <a class="button" id="git" style="position: absolute;top: 440px" href="gotogit" onmouseover="showDetailText(this)" onmouseout="clearTest()">● git服务</a>
-    <a class="button" id="testflight" style="position: absolute;top: 480px; color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 发布testfilght</a>
-    <a class="button" id="quality" style="position: absolute;top: 520px;color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 代码质量扫描</a>
-    <a class="button" id="workscan" style="position: absolute;top: 560px;color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 工程扫描</a>
-    <a class="button" id="blog" style="position: absolute;top: 600px;color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● Blog</a>
+    <a class="button" id="ui" style="position: absolute;top: 320px;" href="uicreate.html" onmouseover="showDetailText(this)" onmouseout="clearTest()">● UI代码生成(iOS)</a>
+    <a class="button" id="jsontomodel" style="position: absolute;top: 360px;" href="next.htm" onmouseover="showDetailText(this)" onmouseout="clearTest()">● JSON转Model(iOS)</a>
+    <a class="button" id="jsonformat1" style="position: absolute;top: 400px;" href="jsonFormatClick1" onmouseover="showDetailText(this)" onmouseout="clearTest()">● JSON格式化(Check)</a>
+    <a class="button" id="jsonformat2" style="position: absolute;top: 420px;" href="jsonFormatClick2" onmouseover="showDetailText(this)" onmouseout="clearTest()">● JSON格式化(Use)</a>
+    <a class="button" id="git" style="position: absolute;top: 460px" href="gotogit" onmouseover="showDetailText(this)" onmouseout="clearTest()">● git服务</a>
+    <a class="button" id="testflight" style="position: absolute;top: 500px; color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 发布testfilght</a>
+    <a class="button" id="quality" style="position: absolute;top: 540px;color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 代码质量扫描</a>
+    <a class="button" id="workscan" style="position: absolute;top: 580px;color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 工程扫描</a>
+    <a class="button" id="blog" style="position: absolute;top: 620px;color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● Blog</a>
         <!--&lt;!&ndash;<a id="first" style= "position:absolute;z-index:1;left:10px;top:400px; " href="jinkens">打包(Andorid)</a>&ndash;&gt;-->
 
 
@@ -74,8 +75,10 @@
             detailDiv.innerHTML = "1.用于研发人员更换特定分支文件，并且打包;<br/><br/>2.请先联系研发人员获取分支名称;<br/><br/>3.进入打包界面后选择Andriod包;<br/><br/>4.等待分支更新完毕，选择对应的分支;<br/><br/>5:点击右侧上传文件，现在支持一次上传两个文件进行替换<br/><br/>6.点击开始打包等待完成"
         }else if (idstring == 'server'){
             detailDiv.innerHTML = "1.用于研发人员制作假数据使用;<br/><br/>2.进入界面后请输入自己的erp，点击查询，如果第一次使用会自动创建账户;<br/><br/>3.现在支持一次创建七个的url;<br/><br/>4.将标准的json填入之后点击插入即可进行访问;<br/><br/>5:安卓和iOS工程内部已有现成的封装，使用方法请联系曾宪明(Android)或者韩胜辉(iOS)<br/><br/>"
-        }else if (idstring == 'jsonformat'){
-            detailDiv.innerHTML = 'json格式化功能'
+        }else if (idstring == 'jsonformat1'){
+            detailDiv.innerHTML = '主要用于json查看'
+        }else if (idstring == 'jsonformat2'){
+            detailDiv.innerHTML = '主要用于json格式化'
         }else if (idstring == 'ui'){
             detailDiv.innerHTML = '1.用于iOS开发人员快速根据属性创建UI代码'
         }else if (idstring == 'jsontomodel'){
