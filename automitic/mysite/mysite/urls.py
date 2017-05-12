@@ -48,6 +48,8 @@ urlpatterns = [
                url(r'jinkens', learn_views.gotojinkens),
                url(r'gotogit', learn_views.gotogitjdjr),
                url(r'packageAndroid', learn_views.packAndroid),
+               url(r'suggest', learn_views.suggest),
+               url(r'writesuggest', learn_views.writesuggest),
 
                ]
 

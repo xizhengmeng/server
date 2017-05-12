@@ -33,6 +33,9 @@ def compute(request):
 def uicreate(request):
     return render(request,'UICreate.html')
 
+def suggest(request):
+    return render(request,'Suggest.html')
+
 def packAndroid(request):
     return render(request,'package.html')
 
@@ -416,3 +419,7 @@ def gotojinkens(request):
 
 def gotogitjdjr(request):
     return HttpResponseRedirect('http://jcode.cbpmgt.com')
+
+
+def writesuggest(request):
+    content = request.POST.get('content')
