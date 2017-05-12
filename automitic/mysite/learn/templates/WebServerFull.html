@@ -128,7 +128,7 @@
 
         $("#insert").click(function(){
             text =  $('#textarea1').val()
-            alert('wahh')
+            alert(text + foldername + filename)
             $.post("/writecontent/", {'content': text,'foldername':foldername,'filename':filename},function(ret){
                 alert(ret)
             })
