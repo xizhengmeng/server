@@ -18,7 +18,7 @@ def getfilecontent(filename):
 def writecontent(string,foldername,filename):
     data = json.loads(string)
     filename = 'text' + filename[3:] + '.txt'
-    filePath = '/Users/wxg/Documents/APIServer'
+    filePath = '/Users/jdjr/Documents/APIServer'
     finalFilePath = filePath + '/' + foldername + '/' + filename
     if data:
        f = open(finalFilePath,'w')
