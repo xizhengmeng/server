@@ -4,7 +4,7 @@ reload(sys)
 sys.setdefaultencoding( "utf-8" )
 
 def getfilecontent(filename):
-    filePath = '/Users/wxg/Documents/APIServer'
+    filePath = '/Users/jdjr/Documents/APIServer'
     filelist = filename.split('+')
     foldername = filelist[0]
     filename = filelist[1]
