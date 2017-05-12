@@ -37,7 +37,7 @@
     <a class="button" id="jsonformat1" style="position: absolute;top: 400px;" href="jsonFormatClick1" onmouseover="showDetailText(this)" onmouseout="clearTest()">● JSON格式化(Check)</a>
     <a class="button" id="jsonformat2" style="position: absolute;top: 440px;" href="jsonFormatClick2" onmouseover="showDetailText(this)" onmouseout="clearTest()">● JSON格式化(Use)</a>
     <a class="button" id="git" style="position: absolute;top: 480px" href="gotogit" onmouseover="showDetailText(this)" onmouseout="clearTest()">● git服务</a>
-    <a class="button" id="testflight" style="position: absolute;top: 520px; color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 发布testfilght</a>
+    <a class="button" id="testflight" style="position: absolute;top: 520px; color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 发布testflight</a>
     <a class="button" id="quality" style="position: absolute;top: 560px;color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 代码质量扫描</a>
     <a class="button" id="workscan" style="position: absolute;top: 600px;color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● 工程扫描</a>
     <a class="button" id="blog" style="position: absolute;top: 640px;color:rgba(255,0,0,0.3)" onmouseover="showDetailText(this)" onmouseout="clearTest()">● Blog</a>
@@ -51,7 +51,7 @@
 
 <div id="detailText" style="position: absolute;top: 80px; text-align:center;left: 250px; width: 80%; float: right; height: 480px; font-size: 17px;background-color:rgba(255,255,255,0.5); color: black">
 
-    <a id="textMore" style="position: absolute;font-family: SimSun,Times New Roman,Serif;left: 100px; margin-top: 100px; text-align: left";>欢迎使用京东金融效率工具</a>
+    <a id="textMore" style="position: absolute;font-family: SimSun,Times New Roman,Serif;left: 100px; margin-top: 100px; text-align: left; color: rgba(60,60,60,0.8);";>欢迎使用京东金融移动研发效率工具</a>
 </div>
 
 <script type="text/javascript">
@@ -63,7 +63,7 @@
 
     function clearTest() {
         var detailDiv = document.getElementById('textMore');
-        detailDiv.innerHTML = "欢迎使用京东金融效率工具";
+        detailDiv.innerHTML = "欢迎使用京东金融移动研发效率工具";
     }
 
     function showDetailText(th) {
