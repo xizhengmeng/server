@@ -128,6 +128,7 @@
 
         $("#insert").click(function(){
             text =  $('#textarea1').val()
+            alert('wahh')
             $.post("/writecontent/", {'content': text,'foldername':foldername,'filename':filename},function(ret){
                 alert(ret)
             })
@@ -136,6 +137,7 @@
 
     function addBtnEvent(id){
         $("#"+id).bind("click",function(){
+            alert('ceshi')
             var $this = $(this);
             filename = $this.val()
             $('#textarea1').html('')

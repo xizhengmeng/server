@@ -8,6 +8,7 @@ def getfilecontent(filename):
     filelist = filename.split('+')
     foldername = filelist[0]
     filename = filelist[1]
+    filename = 'text' + filename[3:] + '.txt'
     finalFilePath = filePath + '/' + foldername + '/' + filename
     f = open(finalFilePath,'r')
     text = f.read()
@@ -16,6 +17,7 @@ def getfilecontent(filename):
 
 def writecontent(string,foldername,filename):
     data = json.loads(string)
+    filename = 'text' + filename[3:] + '.txt'
     filePath = '/Users/wxg/Documents/APIServer'
     finalFilePath = filePath + '/' + foldername + '/' + filename
     if data:
