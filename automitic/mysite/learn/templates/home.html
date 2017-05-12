@@ -49,8 +49,10 @@
     <!--<img id="titleimage" src="{% static 'image/JRFastN.png'%}">-->
 </div>
 
-<div id="detailText" style="position: absolute;top: 80px; font-family: SimSun,Times New Roman,Serif;left: 250px; width: 80%; float: right; height: 480px; font-size: 17px;background-color:rgba(255,255,255,0.5); color: black"></div>
+<div id="detailText" style="position: absolute;top: 80px; text-align:center;left: 250px; width: 80%; float: right; height: 480px; font-size: 17px;background-color:rgba(255,255,255,0.5); color: black">
 
+    <a id="textMore" style="position: absolute;font-family: SimSun,Times New Roman,Serif;left: 100px; margin-top: 100px; text-align: left";>欢迎使用京东金融效率工具</a>
+</div>
 
 <script type="text/javascript">
     function getValue2()
@@ -60,13 +62,13 @@
         }
 
     function clearTest() {
-        var detailDiv = document.getElementById('detailText');
-        detailDiv.innerHTML = "";
+        var detailDiv = document.getElementById('textMore');
+        detailDiv.innerHTML = "欢迎使用京东金融效率工具";
     }
 
     function showDetailText(th) {
         var idstring = th.id
-        var detailDiv = document.getElementById('detailText');
+        var detailDiv = document.getElementById('textMore');
         if (idstring == 'ios') {
             detailDiv.innerHTML = "1.用于研发或者测试人员iOS工程打包;<br/><br/>2.请先联系研发人员获取分支名称;<br/><br/>3.进入打包界面后点击 JDJR Build;<br/><br/>4.选择QA打包;<br/><br/>5.请填入分支名称tag_Name后点击-开始构建发布;<br/><br/>6.打包完成后点击左侧的历史对应的蓝色标示，进入底部扫码下载安装包"
         }else if (idstring == 'android'){
