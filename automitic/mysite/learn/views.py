@@ -421,7 +421,7 @@ def gotogitjdjr(request):
     return HttpResponseRedirect('http://jcode.cbpmgt.com')
 
 
-def writesuggestview(request):
+def writecontentview(request):
     content = request.POST.get('content')
     writecontent(content)
     return HttpResponse('done')
