@@ -423,3 +423,5 @@ def gotogitjdjr(request):
 
 def writesuggest(request):
     content = request.POST.get('content')
+    writesuggest(content)
+    return HttpResponse('done')

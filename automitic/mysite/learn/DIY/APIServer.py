@@ -1,7 +1,9 @@
-import os,subprocess,shutil,json
+import os,subprocess,shutil,json,time
+from pymongo import MongoClient
 import sys
 reload(sys)
 sys.setdefaultencoding( "utf-8" )
+
 
 def getfilecontent(filename):
     filePath = '/Users/jdjr/Documents/APIServer'
@@ -62,5 +64,23 @@ def createfolder(string):
 
     return 'done'
 
-# def writesuggest(string):
-    
+def writesuggest(string):
+
+    connection = MongoClient("localhost",27017)
+    mydb = connection.suggest # new a database
+    myser = mydb.all
+
+    current = time.localtime(time.time())
+    year = current.tm_year
+    month = current.tm_mon
+    day = current.tm_mday
+
+    yearStr = '%i' % year
+    monthStr = '%i' % month
+    dayStr = '%i' % day
+    timeStr = yearStr + monthStr + dayStr
+
+    myser.save({'data':string,'date':timeStr,'name':'suggest'})
+
+def readsuggest():
+    dbs = myser.find({'name':'suggest'})

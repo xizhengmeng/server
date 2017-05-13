@@ -40,13 +40,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="APIServer.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="APIServer.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/learn/DIY/APIServer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.928115">
-              <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
+            <state vertical-scroll-proportion="-4.3703704">
+              <caret line="66" column="16" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="16" />
               <folding>
-                <marker date="1494597941000" expanded="true" signature="1676:1681" placeholder="..." />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,11 +105,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Suggest.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Suggest.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite/learn/templates/Suggest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.8333335">
-              <caret line="37" column="33" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.35215947">
+              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -126,7 +126,7 @@
         <entry file="file://$PROJECT_DIR$/mysite/mysite/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-8.259259">
-              <caret line="51" column="60" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="60" />
+              <caret line="51" column="33" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="33" />
               <folding>
                 <element signature="e#640#672#0" expanded="true" />
               </folding>
@@ -137,8 +137,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/learn/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.037037">
-              <caret line="425" column="0" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
+            <state vertical-scroll-proportion="-9.37037">
+              <caret line="423" column="16" selection-start-line="423" selection-start-column="4" selection-end-line="423" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -185,10 +185,10 @@
         <option value="$PROJECT_DIR$/mysite/learn/templates/package.html" />
         <option value="$PROJECT_DIR$/mysite/learn/templates/WebServerFull.html" />
         <option value="$PROJECT_DIR$/mysite/learn/templates/home.html" />
-        <option value="$PROJECT_DIR$/mysite/learn/templates/Suggest.html" />
         <option value="$PROJECT_DIR$/mysite/mysite/urls.py" />
-        <option value="$PROJECT_DIR$/mysite/learn/views.py" />
         <option value="$PROJECT_DIR$/mysite/learn/DIY/APIServer.py" />
+        <option value="$PROJECT_DIR$/mysite/learn/views.py" />
+        <option value="$PROJECT_DIR$/mysite/learn/templates/Suggest.html" />
       </list>
     </option>
   </component>
@@ -1125,10 +1125,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/learn/DIY/APIServer.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.3703704">
+          <caret line="66" column="16" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/learn/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.37037">
+          <caret line="423" column="16" selection-start-line="423" selection-start-column="4" selection-end-line="423" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/mysite/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.259259">
+          <caret line="51" column="33" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="33" />
+          <folding>
+            <element signature="e#640#672#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/learn/templates/Suggest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.8333335">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="33" />
+        <state vertical-scroll-proportion="0.35215947">
+          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1136,34 +1164,6 @@
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/mysite/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.259259">
-          <caret line="51" column="60" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="60" />
-          <folding>
-            <element signature="e#640#672#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/learn/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.037037">
-          <caret line="425" column="0" selection-start-line="425" selection-start-column="0" selection-end-line="425" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/learn/DIY/APIServer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.928115">
-          <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="4" />
-          <folding>
-            <marker date="1494597941000" expanded="true" signature="1676:1681" placeholder="..." />
           </folding>
         </state>
       </provider>
