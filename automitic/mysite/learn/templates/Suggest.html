@@ -39,10 +39,9 @@
     $(document).ready(function() {
         $("#suggest").click(function () {
             text = $('#textarea').val()
-            alert(text)
             $.post("/writesuggesturl/", {'content': text}, function (data,status) {
-                alert(data)
-                $('#textarea').html('')
+                alert(status)
+                $('#textarea').val('')
             })
         });
     });
