@@ -42,7 +42,7 @@
             alert(text)
             $.post("/writesuggesturl/", {'content': text}, function (data,status) {
                 alert(data)
-                $('#textarea').innerHTML('')
+                $('#textarea').html('')
             })
         });
     });
