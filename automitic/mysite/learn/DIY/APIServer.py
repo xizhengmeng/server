@@ -62,8 +62,3 @@ def createfolder(string):
         f.close()
 
     return 'done'
-
-def writesuggest(string):
-
-
-def readsuggest():
