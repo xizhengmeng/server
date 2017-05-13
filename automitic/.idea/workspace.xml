@@ -61,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Suggest.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Suggest.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite/learn/templates/Suggest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.8865248">
+              <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -78,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Suggest.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Suggest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/learn/DIY/Suggest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10714286">
+            <state vertical-scroll-proportion="-1.6666666">
               <caret line="3" column="27" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="27" />
               <folding />
             </state>
@@ -155,8 +155,8 @@
         <option value="$PROJECT_DIR$/mysite/learn/templates/UICreate.html" />
         <option value="$PROJECT_DIR$/mysite/mysite/urls.py" />
         <option value="$PROJECT_DIR$/mysite/learn/views.py" />
-        <option value="$PROJECT_DIR$/mysite/learn/templates/Suggest.html" />
         <option value="$PROJECT_DIR$/mysite/learn/DIY/Suggest.py" />
+        <option value="$PROJECT_DIR$/mysite/learn/templates/Suggest.html" />
       </list>
     </option>
   </component>
@@ -1118,10 +1118,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/learn/DIY/Suggest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.6666666">
+          <caret line="3" column="27" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/learn/templates/Suggest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.8865248">
+          <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1130,14 +1138,6 @@
             <element signature="n#style#0;n#textarea#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/learn/DIY/Suggest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10714286">
-          <caret line="3" column="27" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
