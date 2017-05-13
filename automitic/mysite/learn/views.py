@@ -6,7 +6,7 @@ from DIY.compute import getModelFromJson
 from DIY.createui import getCreatedStringWithProperties
 from django.http import HttpResponseRedirect
 from DIY.mail import sendMail
-from DIY.APIServer import getfilecontent,writecontent,checkfile,createfolder
+from DIY.APIServer import getfilecontent,writecontent,checkfile,createfolder,writecontent
 import shutil
 import logging
 import commands,time
@@ -421,7 +421,11 @@ def gotogitjdjr(request):
     return HttpResponseRedirect('http://jcode.cbpmgt.com')
 
 
-def writesuggest(request):
+def writesuggestview(request):
     content = request.POST.get('content')
-    writesuggest(content)
+    writecontent(content)
     return HttpResponse('done')
+
+def readcontentview(request):
+    lines = readcontent()
+    return HttpResponse(lines)

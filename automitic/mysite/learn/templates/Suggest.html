@@ -35,7 +35,7 @@
 
     $("#suggest").click(function(){
             text =  $('#textarea').val()
-            $.post("/writesuggest/", {'content': text},function(ret){
+            $.post("/writecontent/", {'content': text},function(ret){
                 alert(ret)
             })
         });
