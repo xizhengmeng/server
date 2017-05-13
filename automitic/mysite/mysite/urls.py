@@ -48,9 +48,10 @@ urlpatterns = [
                url(r'jinkens', learn_views.gotojinkens),
                url(r'gotogit', learn_views.gotogitjdjr),
                url(r'packageAndroid', learn_views.packAndroid),
+               url(r'writesuggesturl', learn_views.insertsuggest),
+               url(r'readsuggesturl', learn_views.readcontentview),
                url(r'suggest', learn_views.suggest),
-               url(r'writesuggest', learn_views.writecontentview),
-               url(r'readsuggest', learn_views.readcontentview),
+
                ]
 
 # ... the rest of your URLconf goes here ...
