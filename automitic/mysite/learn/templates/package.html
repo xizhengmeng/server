@@ -1,11 +1,12 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Build Server</title>
+    <title>sdk更新打包服务</title>
 </head>
 <body>
-<div id="title">Build Server</div>
+<div id="title">SDK更新打包服务</div>
 <div id="content">
     <select id="selPlatform" onchange="platFormChange(this)">
         <option value="none">none</option>
@@ -19,9 +20,9 @@
         <option value="advance">advance</option>
         <option value="online">online</option>
     </select>
-    <button id="button0">archieve</button>
-    <a href="buildlist" id="package">check result</a>
-
+    <button id="button0">开始打包</button>
+    <!--<a style="font-size: 15px;border: solid;border-color: black;border-radius: 2px;border-width: 1px" href="buildlist" id="package">查看打包结果</a>-->
+    <input id="package" type="button" href="buildlist" value="查看打包结果">
     <input id="showAndHidden" type="button" onclick="showAndHidden(this);" value="显示打包说明">
     <input id="showAndHiddenupload" type="button" onclick="showAndHiddenupload(this);" value="使用上传功能">
      <!--<button id="button1">sendMail</button>-->
@@ -261,16 +262,16 @@
 
 <style>
 #title {
-    background-color: black;
-    color: white;
-    height: 30px;
+    background-color: rgba(250,250,250,1);
+    /*color: white;*/
+    height: 25px;
     text-align:center;
     padding: 20px;
-    font-size: 30px;
+    font-size: 25px;
 }
 
 #content {
-    background-color: ghostwhite;
+    /*background-color: ghostwhite;*/
     height: 50px;
     text-align:center;
     padding-top: 25px;
