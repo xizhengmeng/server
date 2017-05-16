@@ -428,6 +428,12 @@ def insertsuggest(request):
     print answer
     return HttpResponse('done')
 
+def gotobugly(request):
+    return HttpResponseRedirect('https://bugly.qq.com/v2/workbench/apps')
+
+def gotogitjdjr(request):
+    return HttpResponseRedirect('http://pm.jdfin.local/redmine/')
+
 def readcontentview(request):
     lines = readcontent()
     return HttpResponse(lines)

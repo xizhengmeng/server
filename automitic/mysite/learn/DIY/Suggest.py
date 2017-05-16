@@ -1,4 +1,5 @@
 import os
+from pymongo import MongoClient
 
 def writesuggest(string):
     filePath = '/Users/jdjr/Documents/suggest'
@@ -9,6 +10,11 @@ def writesuggest(string):
     f = open(filePath + '/' + fileName,'w')
     f.writelines(lines)
     f.close()
+
+    mc = MongoClient("localhost",27017)
+
+    db = mc.users
+
     return 'done'
 
 def readcontent():
