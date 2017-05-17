@@ -24,6 +24,8 @@
     <textarea id="textarea1" placeholder="请输入接口内容，请保证是标准JSON"></textarea>
     <input type="button" value="保存" id="insert" style="position: absolute;margin-left: 10px;top: 475px;background-color: rgba(100,100,100,0.1);color: rgba(110,110,110,1);width: 50px;height: 30px;font-size: 15px;border-width: 0px;border-radius:5px;">
     {% csrf_token %}
+    <br/>
+    <a id="geturl" style="font-size: 15px;;position: absolute;margin-top: 10px">URL</a>
 </div>
 
 </body>
@@ -121,12 +123,13 @@
 
         });
 
-        $("#read").click(function(){
-
-            $.get("/getcontent/", {'branch': 'hanshenghui'},function(ret){
-                $('#textarea1').html(ret)
-            })
-        });
+//        $("#read").click(function(){
+//
+//            $.get("/getcontent/", {'branch': 'hanshenghui'},function(ret){
+//                $('#textarea1').html(ret)
+//
+//            })
+//        });
 
         $("#insert").click(function(){
             text =  $('#textarea1').val()
@@ -143,6 +146,7 @@
             $('#textarea1').html('')
             $.get("/getcontent/", {'filename': foldername + '+' + filename},function(ret){
                 $('#textarea1').val(ret)
+                $('#geturl').val('10.13.8.12:89/' + foldername + '?name=' + filename)
             })
         });
     }
