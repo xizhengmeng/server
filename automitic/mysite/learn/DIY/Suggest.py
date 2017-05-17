@@ -22,7 +22,7 @@ def readcontent():
 def writesuggestmongo(string):
     mc = MongoClient("localhost",27017)
     db = mc.suggest
-    post_info = tdb.ceshi
+    post_info = db.ceshi
 
     timeString = gettiemstring()
 
@@ -31,7 +31,7 @@ def writesuggestmongo(string):
 def getsuggestsmongo():
     mc = MongoClient("localhost",27017)
     db = mc.suggest
-    post_info = tdb.ceshi
+    post_info = db.ceshi
     dbs = post_info.find({'key':'suggest'})
     texts = []
     for item in dbs:
