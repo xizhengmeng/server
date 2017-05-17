@@ -1,5 +1,5 @@
 import os
-# from pymongo import MongoClient
+from pymongo import MongoClient
 
 def writesuggest(string):
     filePath = '/Users/jdjr/Documents/suggest'
@@ -11,9 +11,9 @@ def writesuggest(string):
     f.writelines(lines)
     f.close()
 
-    # mc = MongoClient("localhost",27017)
-    #
-    # db = mc.users
+    mc = MongoClient("localhost",27017)
+
+    db = mc.users
 
     return 'done'
 
