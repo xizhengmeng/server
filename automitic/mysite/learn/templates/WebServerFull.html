@@ -25,7 +25,8 @@
     <input type="button" value="保存" id="insert" style="position: absolute;margin-left: 10px;top: 475px;background-color: rgba(100,100,100,0.1);color: rgba(110,110,110,1);width: 50px;height: 30px;font-size: 15px;border-width: 0px;border-radius:5px;">
     {% csrf_token %}
     <br/>
-    <a id="geturl" style="font-size: 15px;position: absolute;margin-top: 10px">URL</a>
+    <input type="inputtext" value="url" id="geturl" style="font-size: 15px;position: absolute;margin-top: 10px; left: 10px;">
+    <input type="button" value="复制url" id="copy" style="position:absolute;background-color: rgba(100,100,100,0.1);color: rgba(110,110,110,1);width: 60px;height: 30px;font-size: 15px;border-width: 0px;border-radius:5px;">
 </div>
 
 </body>
@@ -135,8 +136,15 @@
             text =  $('#textarea1').val()
             $.post("/writecontent/", {'content': text,'foldername':foldername,'filename':filename},function(ret){
                 alert(ret)
-                $('#geturl').html('10.13.8.12:89/' + foldername + '?name=' + filename)
+                $('#geturl').value = '10.13.8.12:89/' + foldername + '?name=' + filename
             })
+        });
+
+        $('#copy').click(function(){
+            Url= $("geturl").val();
+            alert(Url)
+            Url.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
         });
     });
 
