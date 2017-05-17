@@ -135,6 +135,7 @@
             text =  $('#textarea1').val()
             $.post("/writecontent/", {'content': text,'foldername':foldername,'filename':filename},function(ret){
                 alert(ret)
+                $('#geturl').innerHTML('10.13.8.12:89/' + foldername + '?name=' + filename)
             })
         });
     });
@@ -146,7 +147,7 @@
             $('#textarea1').html('')
             $.get("/getcontent/", {'filename': foldername + '+' + filename},function(ret){
                 $('#textarea1').val(ret)
-                $('#geturl').val('10.13.8.12:89/' + foldername + '?name=' + filename)
+                $('#geturl').innerHTML('10.13.8.12:89/' + foldername + '?name=' + filename)
             })
         });
     }
