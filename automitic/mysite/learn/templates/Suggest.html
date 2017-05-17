@@ -43,6 +43,7 @@
                 alert(status)
                 $('#textarea').val('')
                 $.post("/readsuggesturl/",{'content':'test'},function(data,status){
+                    alert(data)
                     $("#content").innerHTML('data')
                 })
             })
