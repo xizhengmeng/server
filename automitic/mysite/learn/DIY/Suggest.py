@@ -35,7 +35,7 @@ def getsuggestsmongo():
     dbs = post_info.find({'key':'suggest'})
     texts = []
     for item in dbs:
-        texts.append(item['text'])
+        texts.append(item[u'text'])
 
     return texts
 
