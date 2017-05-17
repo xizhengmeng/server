@@ -25,8 +25,8 @@
     <input type="button" value="保存" id="insert" style="position: absolute;margin-left: 10px;top: 475px;background-color: rgba(100,100,100,0.1);color: rgba(110,110,110,1);width: 50px;height: 30px;font-size: 15px;border-width: 0px;border-radius:5px;">
     {% csrf_token %}
     <br/>
-    <input type="inputtext" value="url" id="geturl" style="font-size: 15px;position: absolute;margin-top: 10px; left: 10px;">
-    <input type="button" value="复制url" id="copy" style="position:absolute;background-color: rgba(100,100,100,0.1);color: rgba(110,110,110,1);width: 60px;height: 30px;font-size: 15px;border-width: 0px;border-radius:5px;">
+    <input type="inputtext" id="geturl" style="font-size: 15px;position: absolute;margin-top: 10px; left: 10px;width: 250px">
+    <input type="button" value="复制url" id="copy" style="position:absolute;left: 280px;margin-top: 8px;;background-color: rgba(100,100,100,0.1);color: rgba(110,110,110,1);width: 60px;height: 30px;font-size: 15px;border-width: 0px;border-radius:5px;">
 </div>
 
 </body>
@@ -41,8 +41,15 @@
     filename = ''
 
     $(document).ready(function(){
+        $('#copy').click(function(){
+            var Url2 = $("#geturl")
+            alert(Url2.val())
+            Url2.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            alert("已复制好，可贴粘。");
+        });
+
         $("#check").click(function () {
-            alert('check')
             folder = $("#foldername").val()
             if (folder.length == 0) {
                 alert('请输入查询的用户名')
@@ -140,12 +147,7 @@
             })
         });
 
-        $('#copy').click(function(){
-            Url= $("geturl").val();
-            alert(Url)
-            Url.select(); // 选择对象
-            document.execCommand("Copy"); // 执行浏览器复制命令
-        });
+
     });
 
     function addBtnEvent(id){
