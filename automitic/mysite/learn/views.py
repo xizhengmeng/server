@@ -274,7 +274,7 @@ def upload_urls_file(request):
 def getUrl1(request):
     text = request.GET.get('name')
     if (text):
-        filePath = '/Users/wxg/Documents/APIServer/' + text + '/text1.txt'
+        filePath = '/Users/jdjr/Documents/APIServer/' + text + '/text1.txt'
         if (os.path.exists(filePath)):
             f = open(filePath, 'r')
             text = f.read()
@@ -288,7 +288,7 @@ def getUrl1(request):
 def getUrl2(request):
     text = request.GET.get('name')
     if (text):
-        filePath = '/Users/wxg/Documents/APIServer/' + text + '/text2.txt'
+        filePath = '/Users/jdjr/Documents/APIServer/' + text + '/text2.txt'
         if (os.path.exists(filePath)):
             f = open(filePath, 'r')
             text = f.read()
@@ -302,7 +302,7 @@ def getUrl2(request):
 def getUrl3(request):
     text = request.GET.get('name')
     if (text):
-        filePath = '/Users/wxg/Documents/APIServer/' + text + '/text3.txt'
+        filePath = '/Users/jdjr/Documents/APIServer/' + text + '/text3.txt'
         if (os.path.exists(filePath)):
             f = open(filePath, 'r')
             text = f.read()
@@ -316,7 +316,7 @@ def getUrl3(request):
 def getUrl4(request):
     text = request.GET.get('name')
     if (text):
-        filePath = '/Users/wxg/Documents/APIServer/' + text + '/text4.txt'
+        filePath = '/Users/jdjr/Documents/APIServer/' + text + '/text4.txt'
         if (os.path.exists(filePath)):
             f = open(filePath, 'r')
             text = f.read()
@@ -330,7 +330,7 @@ def getUrl4(request):
 def getUrl5(request):
     text = request.GET.get('name')
     if (text):
-        filePath = '/Users/wxg/Documents/APIServer/' + text + '/text5.txt'
+        filePath = '/Users/jdjr/Documents/APIServer/' + text + '/text5.txt'
         if (os.path.exists(filePath)):
             f = open(filePath, 'r')
             text = f.read()
@@ -344,7 +344,7 @@ def getUrl5(request):
 def getUrl6(request):
     text = request.GET.get('name')
     if (text):
-        filePath = '/Users/wxg/Documents/APIServer/' + text + '/text6.txt'
+        filePath = '/Users/jdjr/Documents/APIServer/' + text + '/text6.txt'
         if (os.path.exists(filePath)):
             f = open(filePath, 'r')
             text = f.read()
@@ -358,7 +358,7 @@ def getUrl6(request):
 def getUrl7(request):
     text = request.GET.get('name')
     if (text):
-        filePath = '/Users/wxg/Documents/APIServer/' + text + '/text7.txt'
+        filePath = '/Users/jdjr/Documents/APIServer/' + text + '/text7.txt'
         if (os.path.exists(filePath)):
             f = open(filePath, 'r')
             text = f.read()
