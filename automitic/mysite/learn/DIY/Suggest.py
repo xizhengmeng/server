@@ -1,4 +1,4 @@
-import os
+import os,time
 from pymongo import MongoClient
 
 def writesuggest(string):
@@ -11,10 +11,6 @@ def writesuggest(string):
     f.writelines(lines)
     f.close()
 
-    mc = MongoClient("localhost",27017)
-
-    db = mc.users
-
     return 'done'
 
 def readcontent():
@@ -22,3 +18,37 @@ def readcontent():
     fileName = 'suggest.txt'
     lines = open(filePath + '/' + fileName,'r').readlines()
     return lines
+
+def writesuggestmongo(string):
+    mc = MongoClient("localhost",27017)
+    db = mc.suggest
+    post_info = tdb.ceshi
+
+    timeString = gettiemstring()
+
+    post_info.save({'text':string,'time':timeString,'key':'suggest'})
+
+def getsuggestsmongo():
+    mc = MongoClient("localhost",27017)
+    db = mc.suggest
+    post_info = tdb.ceshi
+    dbs = post_info.find({'key':'suggest'})
+    texts = []
+    for item in dbs:
+        texts.append(item['text'])
+
+    return texts
+
+def gettiemstring():
+    current = time.localtime(time.time())
+    year = current.tm_year
+    month = current.tm_mon
+    day = current.tm_mday
+
+    yearString = '%i' % year
+    monthStrin = '%i' % month
+    dayString = '%i' % day
+
+    timeString = yearString + monthStrin + dayString
+
+    return timeString

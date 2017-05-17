@@ -424,16 +424,16 @@ def gotogitjdjr(request):
 def insertsuggest(request):
     text = request.POST.get('content')
     print text
-    answer = writesuggest(text)
+    answer = writesuggestmongo(text)
     print answer
     return HttpResponse('done')
 
 def gotobugly(request):
     return HttpResponseRedirect('https://bugly.qq.com/v2/workbench/apps')
 
-def gotogitjdjr(request):
+def gotoredmine(request):
     return HttpResponseRedirect('http://pm.jdfin.local/redmine/')
 
 def readcontentview(request):
-    lines = readcontent()
+    lines = getsuggestsmongo()
     return HttpResponse(lines)
