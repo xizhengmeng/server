@@ -44,6 +44,7 @@
 //                $('#textarea').val('')
                alert('data')
                 $.post("/readsuggesturl/",function(data,status){
+                    alert(data)
                     var obj = JSON.parse(data);
                     alert(typeof(obj))
 
