@@ -43,7 +43,6 @@
     $(document).ready(function(){
         $('#copy').click(function(){
             var Url2 = $("#geturl")
-            alert(Url2.val())
             Url2.select(); // 选择对象
             document.execCommand("Copy"); // 执行浏览器复制命令
             alert("已复制好，可贴粘。");
@@ -143,7 +142,7 @@
             text =  $('#textarea1').val()
             $.post("/writecontent/", {'content': text,'foldername':foldername,'filename':filename},function(ret){
                 alert(ret)
-                $('#geturl').value = '10.13.8.12:89/' + foldername + '?name=' + filename
+                $("#geturl").val('10.13.8.12:89/' + filename + '?name=' + foldername)
             })
         });
 
@@ -157,7 +156,7 @@
             $('#textarea1').html('')
             $.get("/getcontent/", {'filename': foldername + '+' + filename},function(ret){
                 $('#textarea1').val(ret)
-                $("#geturl").val('10.13.8.12:89/' + foldername + '?name=' + filename)
+                $("#geturl").val('10.13.8.12:89/' + filename + '?name=' + foldername)
             })
         });
     }
