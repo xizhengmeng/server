@@ -49,11 +49,17 @@ def gettiemstring():
     year = current.tm_year
     month = current.tm_mon
     day = current.tm_mday
+    hour = current.tm_hour
+    min  = current.tm_min
+    sec = current.tm_sec
 
     yearString = '%i' % year
     monthStrin = '%i' % month
     dayString = '%i' % day
+    hourStr = '%i' % hour
+    minStr = '%i' % min
+    secStr = '%i' % sec
 
-    timeString = yearString + monthStrin + dayString
+    timeString = yearString + '.'+ monthStrin +'.'+  dayString  + '.'+ hourStr + '.'+ minStr
 
     return timeString

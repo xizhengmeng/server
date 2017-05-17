@@ -45,7 +45,14 @@
                alert('data')
                 $.post("/readsuggesturl/",function(data,status){
                     alert(data)
-                    $("#content").innerHTML('data')
+
+                    for (var i in data) {
+                        var jsonObj = ret[i]
+                        alert(jsonObj)
+                    }
+
+
+//                    $("#content").innerHTML('data')
                 })
             })
 //        });
