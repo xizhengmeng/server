@@ -37,7 +37,7 @@ def getsuggestsmongo():
 
     texts = []
     for item in dbs:
-        texts.append(items.get(u'text'))
+        texts.append(item.get(u'text'))
 
     return texts
 
