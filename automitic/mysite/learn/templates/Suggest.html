@@ -42,7 +42,7 @@
             $.post("/writesuggesturl/", {'content': text}, function (data,status) {
                 alert(status)
                 $('#textarea').val('')
-                $.post("/readsuggesturl/",{},function(data,status){
+                $.post("/readsuggesturl/",{'content':'test'},function(data,status){
                     $("#content").innerHTML('data')
                 })
             })

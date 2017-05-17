@@ -7,7 +7,7 @@ from DIY.createui import getCreatedStringWithProperties
 from django.http import HttpResponseRedirect
 from DIY.mail import sendMail
 from DIY.APIServer import getfilecontent,writecontent,checkfile,createfolder
-from DIY.Suggest import writesuggest,readcontent
+from DIY.Suggest import writesuggest,readcontent,writesuggestmongo,getsuggestsmongo
 import shutil
 import logging
 import commands,time
