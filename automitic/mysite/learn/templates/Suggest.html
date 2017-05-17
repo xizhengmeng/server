@@ -39,15 +39,16 @@
     $(document).ready(function() {
         $("#suggest").click(function () {
             text = $('#textarea').val()
-            $.post("/writesuggesturl/", {'content': text}, function (data,status) {
-                alert(status)
-                $('#textarea').val('')
-                $.post("/readsuggesturl/",{'content':'test'},function(data,status){
+//            $.post("/writesuggesturl/", {'content': text}, function (data,status) {
+//                alert(status)
+//                $('#textarea').val('')
+               alert('data')
+                $.post("/readsuggesturl/",function(data,status){
                     alert(data)
                     $("#content").innerHTML('data')
                 })
             })
-        });
+//        });
     });
 
 </script>

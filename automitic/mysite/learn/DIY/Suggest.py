@@ -32,7 +32,9 @@ def getsuggestsmongo():
     mc = MongoClient("localhost",27017)
     db = mc.suggest
     post_info = db.ceshi
-    dbs = post_info.find({'key':'suggest'})
+
+    dbs = post_info.find({u'key':'suggest'})
+
     texts = []
     for item in dbs:
         texts.append(dict.get(u'text'))
