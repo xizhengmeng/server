@@ -50,6 +50,7 @@ urlpatterns = [
                url(r'packageAndroid', learn_views.packAndroid),
                url(r'writesuggesturl', learn_views.insertsuggest),
                url(r'readsuggesturl', learn_views.readcontentview),
+               url(r'ajaxgetbranchesA', learn_views.ajaxgetbranchesfuncA),
                url(r'suggest', learn_views.suggest),
 
                ]

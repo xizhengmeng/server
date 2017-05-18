@@ -9,7 +9,7 @@
 <div id="title">SDK更新打包服务</div>
 <div id="content">
     <select id="selPlatform" onchange="platFormChange(this)">
-        <option value="none">none</option>
+        <!--<option value="none">none</option>-->
         <!--<option value="iOS">iOS</option>-->
         <option value="Andorid">Andorid</option>
     </select>
@@ -53,7 +53,6 @@
 
     needDownCount = true;
     goon = true;
-    
     // self.location='jsonFormatClick1'
 
     $(document).ready(function(){
@@ -79,6 +78,7 @@
 //                     alert('shibai' + msg)
 //                 }
 //         });
+
 
         second = Math.random() * 50 + 150;
         second = Math.round(second*100)/100
@@ -182,7 +182,8 @@
     }
 
     function platFormChange(objct) {
-       var value = objct.value
+//       var value = objct.value
+       value = 'Andorid'
        if (value == "iOS") {
           alert("iOS分支拉取中")
           $.ajax({
@@ -233,6 +234,8 @@
            });     
        }
     }
+
+    platFormChange();
 
     function showAndHidden (object) {
         var text = object.value
