@@ -42,7 +42,9 @@ def getsuggestsmongo():
         dic['time'] = item.get(u'time')
         texts.append(dic)
 
-    return texts
+    datas = json.dumps(texts)
+
+    return datas
 
 def gettiemstring():
     current = time.localtime(time.time())
