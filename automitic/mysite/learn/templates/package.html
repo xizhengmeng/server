@@ -95,8 +95,8 @@
           var selPlat = $("#selPlatform")
           var textPlat = selPlat.val(); // 平台选择
 
-          var inputText = $("#inputtext")
-          var textInput = inputText.val(); // 文件夹名称选择
+//          var inputText = $("#inputtext")
+//          var textInput = inputText.val(); // 文件夹名称选择
 
           var onlineText = $("#selOnline")
           var textOnline = onlineText.val(); // 线上或者预发选择
@@ -105,7 +105,7 @@
           needDownCount = true;
           second = Math.random() * 50 + 150;
           second = Math.round(second*100)/100
-          $.get("/ajaxpack/", {'branch': text,'platName':textPlat, 'folderName':textInput,'textOnline':textOnline},function(ret){
+          $.get("/ajaxpack/", {'branch': text,'platName':textPlat, 'textOnline':textOnline},function(ret){
               if (ret == 'wait') {
                   alert('当前有任务正在执行,请稍后执行新的任务')
                   needDownCount = false;

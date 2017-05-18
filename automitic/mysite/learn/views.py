@@ -272,7 +272,7 @@ def upload_urls_file(request):
 
         return HttpResponse(text + '<br/>' + 'upload over!<br/>' + 'dir list:<br/>' + filelistStr)
 
-def ajaxpack(request):
+def ajaxpackapp(request):
     time1 = time.time()
     f = open('/Users/jdjr/Documents/Build/building.txt','r')
     text = f.read()
@@ -285,14 +285,14 @@ def ajaxpack(request):
     branchName = branchName[index + 1:]
 
     platName = request.GET['platName']
-    folderName = request.GET['folderName']
+    # folderName = request.GET['folderName']
     textOnline = request.GET['textOnline']
 
     f1 = open('/Users/jdjr/Desktop/buildlog.txt','w')
 
     f1.write(branchName + '\n')
     f1.write(platName + '\n')
-    f1.write(folderName + '\n')
+    # f1.write(folderName + '\n')
     f1.write(textOnline + '\n')
     f1.close()
 
@@ -319,7 +319,7 @@ def ajaxpack(request):
            f1.write(text1)
            f1.close()
 
-           mvoeTargetFile(branchName + '***' + folderName)
+           mvoeTargetFile(branchName)
 
            pullBranch('/Users/jdjr/Documents/JDJRAPPAndroid' + '\n' + branchName)
 
@@ -332,7 +332,7 @@ def ajaxpack(request):
 
            timeStr = '%dM%.dD%.dH%.dM' % (begin.month, day, hour,begin.minute)
 
-           text = packAndorid(branchName + '**' + textOnline +'**' + folderName + '**' + timeStr)
+           text = packAndorid(branchName + '**' + textOnline + '**' + timeStr)
 
            f2 = open('/Users/jdjr/Documents/Build/building.txt','w')
            f2.write('')
@@ -346,7 +346,7 @@ def ajaxpack(request):
            timeE = round(time2,1)
 
            pathN = '/Users/jdjr/Documents/Build/buildlog.txt'
-           string = branchName + ' ' + textOnline + ' ' + platName + ' ' + folderName + ' ' + timeStr + ' ' + 'totalTime:' + '%.0f' % timeE
+           string = branchName + ' ' + textOnline + ' ' + platName  + ' ' + timeStr + ' ' + 'totalTime:' + '%.0f' % timeE
            if os.path.exists(pathN):
               f = open(pathN,'r')
               text = f.read()
@@ -399,7 +399,7 @@ def ajaxpack(request):
 
            timeStr = '%dM%.dD%.dH%.dM' % (begin.month, day, hour,begin.minute)
 
-           text = packagiOS(branchName + '**' + textOnline + '**' + folderName + '**' +timeStr)
+           text = packagiOS(branchName + '**' + textOnline  + '**' +timeStr)
 
            f2 = open('/Users/jdjr/Documents/Build/building.txt','w')
            f2.write('')
@@ -410,7 +410,7 @@ def ajaxpack(request):
               time2 = time.time() - time1
               timeE = round(time2,1)
               pathN = '/Users/jdjr/Documents/Build/buildlog.txt'
-              string = branchName + ' ' + textOnline + ' ' + platName + ' ' + folderName + ' ' + timeStr + ' ' + 'totalTime:' + '%.0f' % timeE + ' '+ 'build failed'
+              string = branchName + ' ' + textOnline + ' ' + platName + ' ' + timeStr + ' ' + 'totalTime:' + '%.0f' % timeE + ' '+ 'build failed'
               if os.path.exists(pathN):
                  f = open(pathN,'r')
                  text = f.read()
@@ -433,7 +433,7 @@ def ajaxpack(request):
            timeE = round(time2,1)
 
            pathN = '/Users/jdjr/Documents/Build/buildlog.txt'
-           string = branchName + ' ' + textOnline + ' ' + platName + ' ' + folderName + ' ' + timeStr + ' ' + 'totalTime:' + '%.0f' % timeE + ' '+'build success'
+           string = branchName + ' ' + textOnline + ' ' + platName + ' ' + timeStr + ' ' + 'totalTime:' + '%.0f' % timeE + ' '+'build success'
            if os.path.exists(pathN):
               f = open(pathN,'r')
               text = f.read()
