@@ -84,8 +84,8 @@
       <file leaf-file-name="Suggest.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite/learn/templates/Suggest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34965035">
-              <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.5944056">
+              <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -93,7 +93,8 @@
                 <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1495078758000" expanded="true" signature="3008:3045" placeholder="..." />
+                <marker date="1495078852000" expanded="true" signature="2629:2666" placeholder="..." />
+                <marker date="1495078852000" expanded="true" signature="3622:3659" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1107,8 +1108,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/learn/templates/Suggest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34965035">
-          <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.5944056">
+          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1116,7 +1117,8 @@
             <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1495078758000" expanded="true" signature="3008:3045" placeholder="..." />
+            <marker date="1495078852000" expanded="true" signature="2629:2666" placeholder="..." />
+            <marker date="1495078852000" expanded="true" signature="3622:3659" placeholder="..." />
           </folding>
         </state>
       </provider>

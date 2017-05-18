@@ -37,6 +37,23 @@
 <script type="text/javascript">
 
     $(document).ready(function() {
+
+        $.post("/readsuggesturl/",function(data,status){
+                    var obj = JSON.parse(data);
+                    $("#showcontent").empty();
+                    for (var i in obj) {
+                        var jsonObj = obj[i]
+                        var text = jsonObj.text
+                        var time = jsonObj.time
+                        var suggest = $("<a style='position: absolute; margin-left: 30px'>" + text + "----->" + time + "</a><br/>");
+                        $("#showcontent").append(suggest);
+//                        alert(jsonObj)
+                    }
+
+                });
+
+
+
         $("#suggest").click(function () {
             text = $('#textarea').val()
             if (text.length == 0) {
