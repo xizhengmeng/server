@@ -84,16 +84,16 @@
       <file leaf-file-name="Suggest.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite/learn/templates/Suggest.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54545456">
-              <caret line="47" column="114" selection-start-line="47" selection-start-column="114" selection-end-line="47" selection-end-column="114" />
+            <state vertical-scroll-proportion="0.4755245">
+              <caret line="72" column="113" selection-start-line="72" selection-start-column="113" selection-end-line="72" selection-end-column="113" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#textarea#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#input#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1495091284000" expanded="true" signature="2459:2476" placeholder="..." />
-                <marker date="1495091284000" expanded="true" signature="3435:3452" placeholder="..." />
+                <marker date="1495091347000" expanded="true" signature="2459:2476" placeholder="..." />
+                <marker date="1495091347000" expanded="true" signature="3435:3452" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1107,16 +1107,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mysite/learn/templates/Suggest.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54545456">
-          <caret line="47" column="114" selection-start-line="47" selection-start-column="114" selection-end-line="47" selection-end-column="114" />
+        <state vertical-scroll-proportion="0.4755245">
+          <caret line="72" column="113" selection-start-line="72" selection-start-column="113" selection-end-line="72" selection-end-column="113" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#textarea#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1495091284000" expanded="true" signature="2459:2476" placeholder="..." />
-            <marker date="1495091284000" expanded="true" signature="3435:3452" placeholder="..." />
+            <marker date="1495091347000" expanded="true" signature="2459:2476" placeholder="..." />
+            <marker date="1495091347000" expanded="true" signature="3435:3452" placeholder="..." />
           </folding>
         </state>
       </provider>
