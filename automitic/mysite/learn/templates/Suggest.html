@@ -44,10 +44,8 @@
                 $('#textarea').val('')
 //               alert('data')
                 $.post("/readsuggesturl/",function(data,status){
-                    alert(data)
                     var obj = JSON.parse(data);
-                    alert(typeof(obj))
-
+                    $("#showcontent").empty();
                     for (var i in obj) {
                         var jsonObj = obj[i]
                         var text = jsonObj.text
