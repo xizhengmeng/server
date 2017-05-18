@@ -39,10 +39,10 @@
     $(document).ready(function() {
         $("#suggest").click(function () {
             text = $('#textarea').val()
-//            $.post("/writesuggesturl/", {'content': text}, function (data,status) {
-//                alert(status)
-//                $('#textarea').val('')
-               alert('data')
+            $.post("/writesuggesturl/", {'content': text}, function (data,status) {
+                alert(status)
+                $('#textarea').val('')
+//               alert('data')
                 $.post("/readsuggesturl/",function(data,status){
                     alert(data)
                     var obj = JSON.parse(data);
@@ -50,14 +50,13 @@
 
                     for (var i in obj) {
                         var jsonObj = obj[i]
-                        alert(jsonObj)
+//                        alert(jsonObj)
                     }
 
-
-//                    $("#content").innerHTML('data')
+                    $("#content").innerHTML('data')
                 })
             })
-//        });
+        });
     });
 
 </script>
