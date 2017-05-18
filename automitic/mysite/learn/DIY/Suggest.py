@@ -55,6 +55,11 @@ def gettiemstring():
     min  = current.tm_min
     sec = current.tm_sec
 
+    hour = hour + 8
+    if (hour > 24):
+        hour = hour - 24
+        day = day + 1
+
     yearString = '%i' % year
     monthStrin = '%i' % month
     dayString = '%i' % day
