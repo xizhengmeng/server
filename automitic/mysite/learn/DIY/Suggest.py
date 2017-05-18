@@ -67,6 +67,6 @@ def gettiemstring():
     minStr = '%i' % min
     secStr = '%i' % sec
 
-    timeString = yearString + '.'+ monthStrin +'.'+  dayString  + '.'+ hourStr + '.'+ minStr
+    timeString = yearString + '/'+ monthStrin +'/'+  dayString  + '   '+ hourStr + ':'+ minStr
 
     return timeString
