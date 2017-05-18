@@ -50,10 +50,15 @@
 
                     for (var i in obj) {
                         var jsonObj = obj[i]
+                        var text = jsonObj.text
+                        var time = jsonObj.time
+                        alert(text + time)
+                        var suggest = $("<a>"  + text + "----->" + time + "</a><br/><br/>");
+                        $("#files").append(suggest);
 //                        alert(jsonObj)
                     }
 
-                    $("#showcontent").html('data')
+//                    $("#showcontent").html('data')
                 })
             })
         });
