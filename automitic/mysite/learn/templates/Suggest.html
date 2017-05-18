@@ -16,7 +16,7 @@
   <a style="color: black;width: 100%;float: right;text-align: center; font-size: 22px;margin-top: 10px;">建议区</a>
 </div>
 
-<div id="showcontent" style="overflow:scroll;height: 450px;margin-top: 20px;width: 100%;float: right; background-color: rgba(250,250,250,1);border-width: 0;border-bottom-width: 1px;border-style:solid;border-color: rgba(230,230,230,1);">
+<div id="showcontent" style="height: 450px;overflow:scroll;margin-top: 20px;width: 100%;float: right; background-color: rgba(250,250,250,1);border-width: 0;border-bottom-width: 1px;border-style:solid;border-color: rgba(230,230,230,1);">
 
 </div>
 
@@ -72,7 +72,7 @@
                         var jsonObj = obj[i]
                         var text = jsonObj.text
                         var time = jsonObj.time
-                        var suggest = $("<a style='position: absolute; margin-left: 30px'>" + text + "----->" + time + "</a><br/>");
+                        var suggest = $("<a style='position: absolute; margin-left: 30px'>"+ time + "       " + text + "</a><br/>");
                         $("#showcontent").append(suggest);
 //                        alert(jsonObj)
                     }
