@@ -64,7 +64,7 @@
       <file leaf-file-name="package.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/learn/templates/package.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.6666666">
+            <state vertical-scroll-proportion="-1.7254902">
               <caret line="107" column="26" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="26" />
               <folding />
             </state>
@@ -138,11 +138,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mysite/mysite/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.5555553">
-              <caret line="54" column="52" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.59183675">
+              <caret line="53" column="52" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
               <folding>
                 <element signature="e#640#672#0" expanded="true" />
               </folding>
@@ -150,11 +150,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mysite/learn/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5963719">
-              <caret line="305" column="57" selection-start-line="305" selection-start-column="43" selection-end-line="305" selection-end-column="57" />
+            <state vertical-scroll-proportion="-3.2037036">
+              <caret line="274" column="12" selection-start-line="274" selection-start-column="4" selection-end-line="274" selection-end-column="12" />
               <folding>
                 <element signature="e#14#32#0" expanded="true" />
               </folding>
@@ -195,8 +195,8 @@
         <option value="$PROJECT_DIR$/mysite/learn/templates/home.html" />
         <option value="$PROJECT_DIR$/mysite/learn/DIY/packServer.py" />
         <option value="$PROJECT_DIR$/mysite/learn/templates/package.html" />
-        <option value="$PROJECT_DIR$/mysite/mysite/urls.py" />
         <option value="$PROJECT_DIR$/mysite/learn/views.py" />
+        <option value="$PROJECT_DIR$/mysite/mysite/urls.py" />
       </list>
     </option>
   </component>
@@ -1090,24 +1090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/learn/templates/package.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.6666666">
-          <caret line="107" column="26" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mysite/mysite/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.5555553">
-          <caret line="54" column="52" selection-start-line="54" selection-start-column="52" selection-end-line="54" selection-end-column="52" />
-          <folding>
-            <element signature="e#640#672#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/learn/DIY/packServer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.9259257">
@@ -1116,12 +1098,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/learn/templates/package.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7254902">
+          <caret line="107" column="26" selection-start-line="107" selection-start-column="18" selection-end-line="107" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mysite/learn/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5963719">
-          <caret line="305" column="57" selection-start-line="305" selection-start-column="43" selection-end-line="305" selection-end-column="57" />
+        <state vertical-scroll-proportion="-3.2037036">
+          <caret line="274" column="12" selection-start-line="274" selection-start-column="4" selection-end-line="274" selection-end-column="12" />
           <folding>
             <element signature="e#14#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mysite/mysite/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59183675">
+          <caret line="53" column="52" selection-start-line="53" selection-start-column="52" selection-end-line="53" selection-end-column="52" />
+          <folding>
+            <element signature="e#640#672#0" expanded="true" />
           </folding>
         </state>
       </provider>
