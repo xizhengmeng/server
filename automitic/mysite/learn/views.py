@@ -6,7 +6,7 @@ from DIY.compute import getModelFromJson
 from DIY.createui import getCreatedStringWithProperties
 from django.http import HttpResponseRedirect
 from DIY.mail import sendMail
-from DIY.packServer import getbranchesA
+from DIY.packServer import getbranchesA,packAndorid
 from DIY.APIServer import getfilecontent,writecontent,checkfile,createfolder
 from DIY.Suggest import writesuggest,readcontent,writesuggestmongo,getsuggestsmongo
 import shutil
@@ -271,6 +271,178 @@ def upload_urls_file(request):
                filelistStr += filename
 
         return HttpResponse(text + '<br/>' + 'upload over!<br/>' + 'dir list:<br/>' + filelistStr)
+
+def ajaxpack(request):
+    time1 = time.time()
+    f = open('/Users/jdjr/Documents/Build/building.txt','r')
+    text = f.read()
+
+    if (text != ''):
+        return HttpResponse('wait')
+
+    branchName = request.GET['branch']
+    index = branchName.index('/')
+    branchName = branchName[index + 1:]
+
+    platName = request.GET['platName']
+    folderName = request.GET['folderName']
+    textOnline = request.GET['textOnline']
+
+    f1 = open('/Users/wxg/Desktop/buildlog.txt','w')
+
+    f1.write(branchName + '\n')
+    f1.write(platName + '\n')
+    f1.write(folderName + '\n')
+    f1.write(textOnline + '\n')
+    f1.close()
+
+    if text == '':
+       if (platName == 'Andorid'):
+
+           f1 = open('/Users/jdjr/Documents/Build/building.txt','w')
+           f1.write('Andorid' + branchName)
+           f1.close()
+
+           os.chdir('/Users/jdjr/Documents/JDJRAPPAndroid')
+
+           os.system('git checkout -f')
+
+           cmd = 'git checkout %s' % branchName
+           #os.system(cmd)
+           (status, output) = commands.getstatusoutput(cmd)
+           f1 = open('/Users/jdjr/Desktop/buildlog.txt','r')
+           text = f1.read()
+           f1.close()
+
+           f1 = open('/Users/jdjr/Desktop/buildlog.txt','w')
+           text1 = text + '\n' + output + '%i' % status
+           f1.write(text1)
+           f1.close()
+
+           mvoeTargetFile(branchName + '***' + folderName)
+
+           pullBranch('/Users/jdjr/Documents/JDJRAPPAndroid' + '\n' + branchName)
+
+           begin = datetime.datetime.now()
+           hour = begin.hour + 8
+           day = begin.day
+           if hour > 24:
+              hour = hour - 24
+              day = day + 1
+
+           timeStr = '%dM%.dD%.dH%.dM' % (begin.month, day, hour,begin.minute)
+
+           text = packAndorid(branchName + '**' + textOnline +'**' + folderName + '**' + timeStr)
+
+           f2 = open('/Users/jdjr/Documents/Build/building.txt','w')
+           f2.write('')
+           f2.close()
+
+           os.chdir('/Users/jdjr/Documents/JDJRAPPAndroid')
+           (status, output) = commands.getstatusoutput('git add .')
+           (status1, output1) = commands.getstatusoutput('git checkout -f')
+
+           time2 = time.time() - time1
+           timeE = round(time2,1)
+
+           pathN = '/Users/jdjr/Documents/Build/buildlog.txt'
+           string = branchName + ' ' + textOnline + ' ' + platName + ' ' + folderName + ' ' + timeStr + ' ' + 'totalTime:' + '%.0f' % timeE
+           if os.path.exists(pathN):
+              f = open(pathN,'r')
+              text = f.read()
+              f.close()
+              f = open(pathN,'w')
+              f.write(text + '\n' + string)
+              f.close()
+
+           print text + 'cehsiaceshi'
+           if text == 'failed':
+              return HttpResponse('fail')
+
+           return HttpResponse('done')
+       else:
+
+           f1 = open('/Users/jdjr/Documents/Build/building.txt','w')
+           f1.write('iOS' + branchName)
+           f1.close()
+
+           os.chdir('/Users/jdjr/Documents/JDMobileNew')
+
+           (status, output) = commands.getstatusoutput('git add .')
+           (status1, output1) = commands.getstatusoutput('git checkout -f')
+
+           cmd = 'git checkout {}'.format(branchName)
+
+           (status3, output3) = commands.getstatusoutput(cmd)
+           f1 = open('/Users/jdjr/Desktop/buildlog.txt','r')
+           text = f1.read()
+           f1.close()
+
+           f1 = open('/Users/jdjr/Desktop/buildlog.txt','w')
+           text1 = text + '\n' + output + '%i' % status + '\n' + output3 + '%i' % status3
+           f1.write(text1)
+           f1.close()
+
+           pullBranch('/Users/jdjr/Documents/JDMobileNew' + '\n' + branchName)
+
+           if (textOnline == 'online'):
+              changeToOnlineI()
+           else:
+              changeToOfflineI()
+
+           begin = datetime.datetime.now()
+           hour = begin.hour + 8
+           day = begin.day
+           if hour > 24:
+              hour = hour - 24
+              day = day + 1
+
+           timeStr = '%dM%.dD%.dH%.dM' % (begin.month, day, hour,begin.minute)
+
+           text = packagiOS(branchName + '**' + textOnline + '**' + folderName + '**' +timeStr)
+
+           f2 = open('/Users/jdjr/Documents/Build/building.txt','w')
+           f2.write('')
+           f2.close()
+
+           if text == 'fail':
+
+              time2 = time.time() - time1
+              timeE = round(time2,1)
+              pathN = '/Users/jdjr/Documents/Build/buildlog.txt'
+              string = branchName + ' ' + textOnline + ' ' + platName + ' ' + folderName + ' ' + timeStr + ' ' + 'totalTime:' + '%.0f' % timeE + ' '+ 'build failed'
+              if os.path.exists(pathN):
+                 f = open(pathN,'r')
+                 text = f.read()
+                 f.close()
+                 f = open(pathN,'w')
+                 f.write(text + '\n' + string)
+                 f.close()
+
+              os.chdir('/Users/jdjr/Documents/JDMobileNew')
+              os.system('git add .')
+              os.system('gie checkout -f')
+              shutil.rmtree('/Users/jdjr/Library/Developer/Xcode/DerivedData/JDFinance-ccfjxqvubpytcfaebakqdwdtjjeu')
+              return HttpResponse('fail')
+
+           os.chdir('/Users/jdjr/Documents/JDMobileNew')
+           (status, output) = commands.getstatusoutput('git add .')
+           (status1, output1) = commands.getstatusoutput('git checkout -f')
+
+           time2 = time.time() - time1
+           timeE = round(time2,1)
+
+           pathN = '/Users/jdjr/Documents/Build/buildlog.txt'
+           string = branchName + ' ' + textOnline + ' ' + platName + ' ' + folderName + ' ' + timeStr + ' ' + 'totalTime:' + '%.0f' % timeE + ' '+'build success'
+           if os.path.exists(pathN):
+              f = open(pathN,'r')
+              text = f.read()
+              f.close()
+              f = open(pathN,'w')
+              f.write(text + '\n' + string)
+              f.close()
+
+           return HttpResponse('done')
 
 def getUrl1(request):
     text = request.GET.get('name')

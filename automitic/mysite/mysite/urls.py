@@ -51,8 +51,8 @@ urlpatterns = [
                url(r'writesuggesturl', learn_views.insertsuggest),
                url(r'readsuggesturl', learn_views.readcontentview),
                url(r'ajaxgetbranchesA', learn_views.ajaxgetbranchesfuncA),
+               url(r'ajaxpack', learn_views.ajaxgetbranchesfuncA),
                url(r'suggest', learn_views.suggest),
-
                ]
 
 # ... the rest of your URLconf goes here ...

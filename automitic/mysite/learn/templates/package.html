@@ -14,11 +14,11 @@
         <option value="Andorid">Andorid</option>
     </select>
     <select onchange="gradeChange(this.value)" id="selSmall">
-        <option value="">select branch</option>
+        <option value="">选择分支</option>
     </select>
     <select id="selOnline">
-        <option value="advance">advance</option>
-        <option value="online">online</option>
+        <option value="advance">预发</option>
+        <option value="online">线上</option>
     </select>
     <button id="button0">开始打包</button>
     <!--<a style="font-size: 15px;border: solid;border-color: black;border-radius: 2px;border-width: 1px" href="buildlist" id="package">查看打包结果</a>-->
@@ -27,7 +27,7 @@
     <input id="showAndHiddenupload" type="button" onclick="showAndHiddenupload(this);" value="使用上传功能">
      <!--<button id="button1">sendMail</button>-->
 </div>
-<div id="timeLabel">select branch to build</div>
+<div id="timeLabel">选择分支开始打包</div>
 
 <div id="upload">
     <form enctype="multipart/form-data" action="/uploadFile/" method="post">
@@ -88,7 +88,7 @@
           var sel = $("#selSmall")
           var text = sel.val(); // 分支选择
           if (text == "select branch") {
-              alert("please select branch");
+              alert("请选择分支");
               return;
           }
 
@@ -226,7 +226,7 @@
                        jsonObj = jsonObj.replace("[m","")
                        optionstring += "<option value=\"" + jsonObj + "\" >" + jsonObj + "</option>";
                     }
-                    $("#selSmall").html("<option>select branch</option> "+optionstring);
+                    $("#selSmall").html("<option>选择分支</option> "+optionstring);
                 },
                 error: function (msg) {
                     alert('shibai' + msg)
