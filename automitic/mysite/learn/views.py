@@ -53,7 +53,7 @@ def createui(request):
     return HttpResponse(string)
 
 def pullBranch(dir):
-    path = '/Users/wxg/Desktop/branches.txt'
+    path = '/Users/jdjr/Desktop/branches.txt'
     f1 = open(path,'w')
     f1.write(dir)
     f1.close()
@@ -70,13 +70,13 @@ def pullBranch(dir):
 
 def mvoeTargetFile(string):
 
-    filePathF = '/Users/wxg/Documents/upload/'
+    filePathF = '/Users/jdjr/Documents/upload/'
     fileList = os.listdir(filePathF)
 
-    filePath = '/Users/wxg/Documents/JDJRAPPAndroid/JDJR/libs/'
+    filePath = '/Users/jdjr/Documents/JDJRAPPAndroid/JDJR/libs/'
     filePathN = filePath + 'armeabi/'
 
-    f = open('/Users/wxg/Documents/Build/uploadlog.txt','a')
+    f = open('/Users/jdjr/Documents/Build/uploadlog.txt','a')
 
     for fileName in fileList:
         f.write(fileName + '\n')
@@ -136,8 +136,8 @@ def upload_file(request):
         myFile1 =request.FILES.get("myfile1", None)
         myFile2 =request.FILES.get("myfile2", None)
 
-        filePathTemp = '/Users/wxg/Documents/upload/'
-        filePath = '/Users/wxg/Documents/JDJRAPPAndroid/JDJR/libs/'
+        filePathTemp = '/Users/jdjr/Documents/upload/'
+        filePath = '/Users/jdjr/Documents/JDJRAPPAndroid/JDJR/libs/'
         filePathN = filePath + 'armeabi/'
 
         if myFile1:
@@ -193,7 +193,7 @@ def upload_file(request):
                #filelistStr += filename
 
         #return HttpResponse('upload over!' + 'dir list:' + filelistStr)
-        os.chdir('/Users/wxg/Documents/JDJRAPPAndroid')
+        os.chdir('/Users/jdjr/Documents/JDJRAPPAndroid')
         text = os.popen('git status')
         textStr = text.read()
 
@@ -215,7 +215,7 @@ def upload_urls_file(request):
         myFile6 =request.FILES.get("myfile6", None)
         myFile7 =request.FILES.get("myfile7", None)
 
-        filePath = '/Users/wxg/Documents/APIServer/' + text
+        filePath = '/Users/jdjr/Documents/APIServer/' + text
 
         if (not os.path.exists(filePath)):
             os.mkdir(filePath)
@@ -288,7 +288,7 @@ def ajaxpack(request):
     folderName = request.GET['folderName']
     textOnline = request.GET['textOnline']
 
-    f1 = open('/Users/wxg/Desktop/buildlog.txt','w')
+    f1 = open('/Users/jdjr/Desktop/buildlog.txt','w')
 
     f1.write(branchName + '\n')
     f1.write(platName + '\n')

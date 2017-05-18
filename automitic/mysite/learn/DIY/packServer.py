@@ -55,24 +55,24 @@ def packagiOS(string):
     #os.system('git commit -m "config"')
 
     buildCmd ='xcodebuild -workspace JDFinance.xcworkspace -scheme JDMobile -configuration Debug build'
-    f1 = open('/Users/wxg/Desktop/buildlog.txt','r')
+    f1 = open('/Users/jdjr/Desktop/buildlog.txt','r')
     text = f1.read()
     f1.close()
 
     (status, output) = commands.getstatusoutput(buildCmd)
-    f1 = open('/Users/wxg/Desktop/buildlog.txt','w')
+    f1 = open('/Users/jdjr/Desktop/buildlog.txt','w')
     text1 = text + '\n' + output + '%i' % status
     f1.write(text1)
     f1.close()
 
-    targetPath1 = '/Users/wxg/Library/Developer/Xcode/DerivedData/JDFinance-ccfjxqvubpytcfaebakqdwdtjjeu/Build/Products/Debug-iphoneos/JDMobile.app'
-    targetPath2 = '/Users/wxg/Documents/Build/iOS/%s/JDMobile.app' % string
+    targetPath1 = '/Users/jdjr/Library/Developer/Xcode/DerivedData/JDFinance-ccfjxqvubpytcfaebakqdwdtjjeu/Build/Products/Debug-iphoneos/JDMobile.app'
+    targetPath2 = '/Users/jdjr/Documents/Build/iOS/%s/JDMobile.app' % string
 
-    targetPath3 = '/Users/wxg/Documents/Build/iOS/%s' % string
+    targetPath3 = '/Users/jdjr/Documents/Build/iOS/%s' % string
 
     if (os.path.exists(targetPath3) == False):
          os.mkdir(targetPath3)
-         shutil.move('/Users/wxg/Desktop/buildlog.txt',targetPath3+'/buildlog.txt')
+         shutil.move('/Users/jdjr/Desktop/buildlog.txt',targetPath3+'/buildlog.txt')
 
     shutil.move(targetPath1, targetPath2)
 
@@ -83,7 +83,7 @@ def packagiOS(string):
     text = f1.read()
     f1.close()
 
-    shutil.copyfile('/Users/wxg/Desktop/xrun.py',targetPath3 + '/xrun.py')
+    shutil.copyfile('/Users/jdjr/Desktop/xrun.py',targetPath3 + '/xrun.py')
     os.chdir(targetPath3)
     (status1, output1) = commands.getstatusoutput('python xrun.py')
     f1 = open(targetPath3+'/buildlog.txt','w')
@@ -99,47 +99,47 @@ def packagiOS(string):
 
 def packAndorid(string):
 
-    f1 = open('/Users/wxg/Desktop/buildlog.txt','r')
+    f1 = open('/Users/jdjr/Desktop/buildlog.txt','r')
     text = f1.read()
     f1.close()
 
     (status, output) = commands.getstatusoutput('gradle assembleDebug')
-    f1 = open('/Users/wxg/Desktop/buildlog.txt','w')
+    f1 = open('/Users/jdjr/Desktop/buildlog.txt','w')
     text1 = text + '\n' + output + '%i' % status
     f1.write(text1)
     f1.close()
 
-    path = '/Users/wxg/Documents/Build/Android'
+    path = '/Users/jdjr/Documents/Build/Android'
     if (os.path.exists(path) == False):
         os.mkdir(path)
 
-    path1 = '/Users/wxg/Documents/Build/Android/{}'.format(string)
+    path1 = '/Users/jdjr/Documents/Build/Android/{}'.format(string)
 
     if (os.path.exists(path1) == False):
         os.mkdir(path1)
-        shutil.move('/Users/wxg/Desktop/buildlog.txt',path1+'/buildlog.txt')
+        shutil.move('/Users/jdjr/Desktop/buildlog.txt',path1+'/buildlog.txt')
 
     if 'BUILD FAILED' in output:
         return 'failed'
 
-    pathDebug = '/Users/wxg/Documents/JDJRAPPAndroid/JDJR/build/outputs/apk/JDJR-debug-unaligned.apk'
-    pathDebugT = '/Users/wxg/Documents/Build/Android/{}/JDJR-debug-unaligned.apk'.format(string)
+    pathDebug = '/Users/jdjr/Documents/JDJRAPPAndroid/JDJR/build/outputs/apk/JDJR-debug-unaligned.apk'
+    pathDebugT = '/Users/jdjr/Documents/Build/Android/{}/JDJR-debug-unaligned.apk'.format(string)
 
     if (os.path.exists(pathDebug) == True):
         if (os.path.exists(pathDebugT) == True):
             os.remove(pathDebugT)
         shutil.copyfile(pathDebug, pathDebugT)
 
-    pathDebug1 = '/Users/wxg/Documents/JDJRAPPAndroid/JDJR/build/outputs/apk/JDJR-debug.apk'
-    pathDebugT1 = '/Users/wxg/Documents/Build/Android/{}/JDJR-debug.apk'.format(string)
+    pathDebug1 = '/Users/jdjr/Documents/JDJRAPPAndroid/JDJR/build/outputs/apk/JDJR-debug.apk'
+    pathDebugT1 = '/Users/jdjr/Documents/Build/Android/{}/JDJR-debug.apk'.format(string)
 
     if (os.path.exists(pathDebug1) == True):
         if (os.path.exists(pathDebugT1) == True):
             os.remove(pathDebugT1)
         shutil.copyfile(pathDebug1,pathDebugT1)
 
-    pathRelease = '/Users/wxg/Documents/JDJRAPPAndroid/JDJR/build/outputs/apk/JDJR-release-unsigned.apk'
-    pathReleaseT = '/Users/wxg/Documents/Build/Android/{}/JDJR-release-unsigned.apk'.format(string)
+    pathRelease = '/Users/jdjr/Documents/JDJRAPPAndroid/JDJR/build/outputs/apk/JDJR-release-unsigned.apk'
+    pathReleaseT = '/Users/jdjr/Documents/Build/Android/{}/JDJR-release-unsigned.apk'.format(string)
 
     if (os.path.exists(pathRelease) == True):
        if (os.path.exists(pathReleaseT) == True):
@@ -152,7 +152,7 @@ def packAndorid(string):
     return 'Android/' + string + 'done'
 
 def getbranchesI(string):
-    os.chdir('/Users/wxg/Documents/JDMobileNew')
+    os.chdir('/Users/jdjr/Documents/JDMobileNew')
     os.popen('git fetch')
     cmdline = 'git branch -r'
     cmdout = os.popen(cmdline)
@@ -169,7 +169,7 @@ def getbranchesA(string):
     return cmdout.read()
 
 def changeToOnlineI():
-    lines=open("/Users/wxg/Documents/JDMobileNew/JRLibrary/JRMacro/ConfigManager.h",'r').readlines()
+    lines=open("/Users/jdjr/Documents/JDMobileNew/JRLibrary/JRMacro/ConfigManager.h",'r').readlines()
     flen=len(lines)-1
     for i in range(20):
        if '#define' in lines[i]:
@@ -179,7 +179,7 @@ def changeToOnlineI():
     open("/Users/wxg/Documents/JDMobileNew/JRLibrary/JRMacro/ConfigManager.h",'w').writelines(lines)
 
 def changeToOfflineI():
-    lines=open("/Users/wxg/Documents/JDMobileNew/JRLibrary/JRMacro/ConfigManager.h",'r').readlines()
+    lines=open("/Users/jdjr/Documents/JDMobileNew/JRLibrary/JRMacro/ConfigManager.h",'r').readlines()
     flen=len(lines)-1
     for i in range(20):
         if '#define' in lines[i]:
@@ -189,5 +189,5 @@ def changeToOfflineI():
             if '//#define JDJR_NetWork_Beta' in lines[i]:
                 lines[i] = lines[i].replace('//','')
 
-    open("/Users/wxg/Documents/JDMobileNew/JRLibrary/JRMacro/ConfigManager.h",'w').writelines(lines)
+    open("/Users/jdjr/Documents/JDMobileNew/JRLibrary/JRMacro/ConfigManager.h",'w').writelines(lines)
 
