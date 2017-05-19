@@ -588,10 +588,13 @@ def getindexrank(request):
     getindexrankfun()
     return HttpResponse()
 
-def gotojinkens(request):
+def gotojinkensios(request):
     return HttpResponseRedirect('http://bds.cbpmgt.com/jenkins/job/ios_jdjr/')
 
-def gotogitjdjr(request):
+def gotojinkensios(request):
+    return HttpResponseRedirect('http://bds.cbpmgt.com/jenkins/job/android_jdjr/')
+
+def gotojinkensandroid(request):
     return HttpResponseRedirect('http://jcode.cbpmgt.com')
 
 def insertsuggest(request):
