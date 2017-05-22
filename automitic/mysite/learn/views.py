@@ -199,6 +199,27 @@ def upload_file(request):
 
         return HttpResponse('success' +'<br>'+ textStr)
 
+def upload_filenew(request):
+    if request.method == "POST":
+        myFile1 = request.FILES.get("myfile1", None)
+        if myFile1:
+           filePahtEnd = '/Users/jdjr/Desktop/ceshi'
+           destination = open(os.path.join(filePahtEnd, myFile1.name),'wb+')
+           print type(myFile1)
+           print myFile1.size
+           size = myFile1.size
+           sizeN = 0
+           for chunk in myFile1.chunks():
+               sizeN = len(chunk) + sizeN
+               f = open('/Users/jdjr/Desktop/ceshi.txt','w')
+               str = '%f' % (sizeN * 1.0 / size * 100.0)
+               f.write(str)
+               f.close()
+               destination.write(chunk)
+           destination.close()
+
+    return HttpResponse('done')
+
 def upload_urls_file(request):
     if request.method == "POST":
         text = request.POST.get('inputId')

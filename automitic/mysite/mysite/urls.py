@@ -41,6 +41,7 @@ urlpatterns = [
                url(r'url5', learn_views.getUrl5),  # new
                url(r'url6', learn_views.getUrl6),
                url(r'url7', learn_views.getUrl7),
+               url(r'uploadFile',learn_views.upload_filenew),
                url(r'getcontent', learn_views.getcontentstring),
                url(r'writecontent', learn_views.writestring),
                url(r'getforderlist', learn_views.checkfilelist),
